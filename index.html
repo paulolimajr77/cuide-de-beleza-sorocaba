@@ -142,8 +142,11 @@
     }
     /* celular: rosto da Danní fica à direita, fora de trás do texto */
     @media (max-width: 767px) {
+      .hero-label-txt { display: flex; flex-direction: column; gap: .5rem; letter-spacing: .3em; }
+      .hl-dot { display: none; }
+      [data-hero="label"] .h-px { display: none; }
       .hero-label-txt { color: #E3C48C !important; opacity: 1 !important; text-shadow: 0 1px 10px rgba(7,11,17,.95), 0 0 3px rgba(7,11,17,.8); }
-      .hero-bg-img { height: 78%; object-position: 55% 0%;
+      .hero-bg-img { height: 78%; object-position: 51% 0%;
         -webkit-mask-image: linear-gradient(180deg, #000 68%, transparent 100%); mask-image: linear-gradient(180deg, #000 68%, transparent 100%); }
       .hero-overlay {
         background:
@@ -677,7 +680,7 @@
 
       <div data-hero="label" class="flex items-center gap-3.5 mb-8">
         <span class="hero-label-txt text-[#C9A96E] text-[0.75rem] font-sans font-medium tracking-[0.35em] uppercase opacity-90">
-          ESTÉTICA &nbsp;·&nbsp; BELEZA &nbsp;·&nbsp; AUTOCUIDADO
+          <span class="hl-w">ESTÉTICA</span><span class="hl-dot" aria-hidden="true"> &nbsp;·&nbsp; </span><span class="hl-w">BELEZA</span><span class="hl-dot" aria-hidden="true"> &nbsp;·&nbsp; </span><span class="hl-w">AUTOCUIDADO</span>
         </span>
         <div class="h-px w-14 bg-[rgba(201,169,110,0.5)]"></div>
       </div>
