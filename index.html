@@ -140,6 +140,17 @@
         background: linear-gradient(180deg, rgba(7,11,17,0.55) 0%, rgba(7,11,17,0.86) 45%, rgba(7,11,17,0.96) 100%);
       }
     }
+    /* celular: rosto da Danní fica à direita, fora de trás do texto */
+    @media (max-width: 767px) {
+      .hero-label-txt { color: #E3C48C !important; opacity: 1 !important; text-shadow: 0 1px 10px rgba(7,11,17,.95), 0 0 3px rgba(7,11,17,.8); }
+      .hero-bg-img { height: 78%; object-position: 55% 0%;
+        -webkit-mask-image: linear-gradient(180deg, #000 68%, transparent 100%); mask-image: linear-gradient(180deg, #000 68%, transparent 100%); }
+      .hero-overlay {
+        background:
+          linear-gradient(90deg, rgba(7,11,17,0.6) 0%, rgba(7,11,17,0.12) 62%, rgba(7,11,17,0) 100%),
+          linear-gradient(180deg, rgba(7,11,17,0.35) 0%, rgba(7,11,17,0.72) 50%, rgba(7,11,17,0.96) 100%);
+      }
+    }
     .hero-bottom-fade {
       position: absolute;
       bottom: 0;
@@ -651,10 +662,10 @@
 <section id="inicio" class="hero-bg-container min-h-[92vh] flex items-center pt-[72px] overflow-hidden">
 
   <img
-    src="assets-cliente/bg-hero.webp"
+    src="assets-cliente/bg-hero2.webp"
     alt="Danní Rodrigues — Espaço Cuide de Sua Beleza"
     class="hero-bg-img pointer-events-none"
-    width="2400" height="1351" fetchpriority="high" decoding="async"
+    width="3000" height="1504" fetchpriority="high" decoding="async"
   />
 
   <div class="hero-overlay"></div>
@@ -665,7 +676,7 @@
     <div class="max-w-2xl">
 
       <div data-hero="label" class="flex items-center gap-3.5 mb-8">
-        <span class="text-[#C9A96E] text-[0.75rem] font-sans font-medium tracking-[0.35em] uppercase opacity-90">
+        <span class="hero-label-txt text-[#C9A96E] text-[0.75rem] font-sans font-medium tracking-[0.35em] uppercase opacity-90">
           ESTÉTICA &nbsp;·&nbsp; BELEZA &nbsp;·&nbsp; AUTOCUIDADO
         </span>
         <div class="h-px w-14 bg-[rgba(201,169,110,0.5)]"></div>
