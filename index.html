@@ -570,6 +570,25 @@
       .mob-bar { transition: none; }
     }
 
+/* ===== Janela do vídeo ===== */
+    .vm { position: fixed; inset: 0; z-index: 70; display: none; align-items: center; justify-content: center; padding: 12px; }
+    .vm.is-shown { display: flex; }
+    .vm-backdrop { position: absolute; inset: 0; background: rgba(5, 8, 14, .88); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); opacity: 0; transition: opacity .35s ease; }
+    .vm.is-open .vm-backdrop { opacity: 1; }
+    .vm-stage { position: relative; display: flex; flex-direction: column; align-items: center; gap: 12px; opacity: 0; transform: translateY(14px) scale(.96); transition: opacity .35s ease, transform .5s cubic-bezier(.2, .7, .2, 1); }
+    .vm.is-open .vm-stage { opacity: 1; transform: none; }
+    .vm-frame { width: min(94vw, calc((100vh - 150px) * 9 / 16)); aspect-ratio: 9 / 16; background: #000; border: 1px solid rgba(201, 169, 110, .45); border-radius: 2px; overflow: hidden; box-shadow: 0 40px 80px -24px rgba(0, 0, 0, .9); }
+    @supports (height: 1dvh) { .vm-frame { width: min(94vw, calc((100dvh - 150px) * 9 / 16)); } }
+    .vm-video { display: block; width: 100%; height: 100%; object-fit: contain; background: #000; }
+    .vm-close { align-self: flex-end; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, .3); background: rgba(7, 11, 17, .6); transition: border-color .3s ease, color .3s ease; }
+    .vm-close svg { width: 18px; height: 18px; }
+    .vm-close:hover, .vm-close:focus-visible { border-color: #C9A96E; color: #DFC08A; }
+    .vm-read { display: inline-flex; align-items: center; min-height: 44px; padding: 0 .5rem; font: 400 .8rem/1.4 'DM Sans', sans-serif; letter-spacing: .06em; color: rgba(255, 255, 255, .72); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(201, 169, 110, .5); transition: color .3s ease; }
+    .vm-read:hover, .vm-read:focus-visible { color: #DFC08A; }
+    html.vm-open, html.vm-open body { overflow: hidden; }
+    @media (prefers-reduced-motion: reduce) { .vm-backdrop, .vm-stage { transition: none; } .vm-stage { transform: none; } }
+
     /* Link ativo do menu */
     .nav-link { padding-bottom: 4px; border-bottom: 1px solid transparent; transition: color .3s ease, border-color .3s ease; }
     .nav-link:hover { color: #fff; }
@@ -755,7 +774,7 @@
           <span>AGENDAR MINHA AVALIAÇÃO</span>
           <svg class="arr w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
-        <a href="#como-funciona"
+        <a href="#como-funciona" data-video-open aria-haspopup="dialog"
            class="btn-gold-outline inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase shadow-lg">
           <span>ENTENDER COMO FUNCIONA</span>
         </a>
@@ -849,9 +868,17 @@
             Realce seus lábios sem perder a naturalidade. Mais harmonia, mais confiança, mais você.
           </p>
 
-          <a href="#flowlips" class="btn-gold-outline inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase">
-            <span>SAIBA MAIS</span>
-          </a>
+          <div class="flex flex-col items-stretch sm:items-start gap-3">
+            <a href="#flowlips" class="btn-gold-outline inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase whitespace-nowrap">
+              <span>SAIBA MAIS</span>
+            </a>
+            <button type="button" data-video-open aria-haspopup="dialog" class="btn-gold-outline inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase whitespace-nowrap cursor-pointer">
+              <span class="inline-flex shrink-0 items-center justify-center w-7 h-7 rounded-full border border-[#DFC08A]/70" aria-hidden="true">
+                <svg class="w-3 h-3" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#DFC08A"/></svg>
+              </span>
+              <span>ASSISTIR AO PROCEDIMENTO</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -1631,6 +1658,20 @@
   <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.508 5.823L.057 23.082a.75.75 0 00.921.921l5.259-1.451A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.95-1.353l-.354-.21-3.665 1.012 1.012-3.665-.21-.354A9.71 9.71 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
 </a>
 
+<!-- Janela do vídeo do Flow Lips (o vídeo só é baixado quando abre) -->
+<div id="video-modal" class="vm" role="dialog" aria-modal="true" aria-label="Vídeo: conheça o procedimento Flow Lips" aria-hidden="true">
+  <div class="vm-backdrop" data-vm-close></div>
+  <div class="vm-stage">
+    <button type="button" class="vm-close" data-vm-close aria-label="Fechar vídeo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="vm-frame">
+      <video class="vm-video" playsinline controls preload="none" poster="assets-cliente/flow-lips-capa.webp" aria-label="Flow Lips: conheça o procedimento"></video>
+    </div>
+    <a href="#como-funciona" class="vm-read" data-vm-read>Prefere ler? Ver o passo a passo</a>
+  </div>
+</div>
+
 <!-- Bibliotecas de animação -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
@@ -1702,6 +1743,86 @@
     });
     mobMenu.querySelectorAll('a[target="_blank"]').forEach(function (a) {
       a.addEventListener('click', function () { setMenu(false); });
+    });
+  }
+
+  /* ---------------------------------------------------------------- Vídeo do Flow Lips em janela (só baixa ao abrir) */
+  var vm = document.getElementById('video-modal');
+  if (vm) {
+    var vmVideo = vm.querySelector('video');
+    var vmCloseBtn = vm.querySelector('.vm-close');
+    var vmIsOpen = false, vmFrom = null, vmTimer = null, vmLoaded = false, vmTriedFallback = false;
+    var SRC_HEVC = 'assets-cliente/flow-lips-video-hevc.mp4';
+    var SRC_H264 = 'assets-cliente/flow-lips-video.mp4';
+    var vmLoad = function () {
+      if (vmLoaded) return;
+      vmLoaded = true;
+      // HEVC (mais leve) quando o navegador toca; senão H.264
+      vmVideo.src = vmVideo.canPlayType('video/mp4; codecs="hvc1"') ? SRC_HEVC : SRC_H264;
+    };
+    vmVideo.addEventListener('error', function () {
+      if (!vmTriedFallback && vmVideo.src.indexOf('hevc') > -1) {
+        vmTriedFallback = true;
+        vmVideo.src = SRC_H264;
+        vmVideo.play().catch(function () {});
+      }
+    });
+    var setVideoModal = function (open, from) {
+      if (open === vmIsOpen) return;
+      vmIsOpen = open;
+      clearTimeout(vmTimer);
+      vm.setAttribute('aria-hidden', open ? 'false' : 'true');
+      if (open) {
+        vmFrom = from || document.activeElement;
+        vm.classList.add('is-shown');
+        void vm.offsetWidth;
+        html.classList.add('vm-open');
+        if (lenis) lenis.stop();
+        vm.classList.add('is-open');
+        vmLoad();
+        var p = vmVideo.play();
+        if (p && p.catch) p.catch(function () {});
+        vmCloseBtn.focus({ preventScroll: true });
+      } else {
+        vmVideo.pause();
+        vm.classList.remove('is-open');
+        html.classList.remove('vm-open');
+        if (lenis) lenis.start();
+        vmTimer = setTimeout(function () { vm.classList.remove('is-shown'); }, reduce ? 0 : 480);
+        if (vmFrom && vmFrom.focus) vmFrom.focus({ preventScroll: true });
+      }
+    };
+    document.querySelectorAll('[data-video-open]').forEach(function (b) {
+      b.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        setVideoModal(true, b);
+      });
+    });
+    vm.querySelectorAll('[data-vm-close]').forEach(function (b) {
+      b.addEventListener('click', function () { setVideoModal(false); });
+    });
+    var vmRead = vm.querySelector('[data-vm-read]');
+    if (vmRead) vmRead.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      setVideoModal(false);
+      var t = document.getElementById('como-funciona');
+      if (!t) return;
+      setTimeout(function () {
+        var ty = window.gsap ? (window.gsap.getProperty(t, 'y') || 0) : 0;
+        scrollToY(Math.max(0, t.getBoundingClientRect().top + window.scrollY - ty - NAV_H));
+        history.pushState(null, '', '#como-funciona');
+      }, reduce ? 0 : 260);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!vmIsOpen) return;
+      if (e.key === 'Escape') { e.preventDefault(); setVideoModal(false); return; }
+      if (e.key !== 'Tab') return;
+      var f = [vmCloseBtn, vmVideo, vmRead].filter(Boolean);
+      var i = f.indexOf(document.activeElement);
+      if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus(); }
+      else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); f[0].focus(); }
     });
   }
 
@@ -1925,9 +2046,9 @@
       });
       el.addEventListener('pointerleave', function () { clearInterval(timer); timer = null; });
     };
-    // brilhos nos cards do Bento Grid e só nos botões principais/chamadas de ação (só com mouse)
+    // brilhos nos cards do Bento Grid e nos botões principais/chamadas de ação e nos botões que abrem o vídeo (só com mouse)
     document.querySelectorAll('.bento-card').forEach(function (c) { makeSparkles(c); });
-    document.querySelectorAll('.btn-gold-solid, .btn-blue').forEach(function (b) {
+    document.querySelectorAll('.btn-gold-solid, .btn-blue, [data-video-open]').forEach(function (b) {
       makeSparkles(b, { max: 9, out: 0.55, bmin: 3, bspan: 11, gap: 230, reach: 14 });
     });
   }
