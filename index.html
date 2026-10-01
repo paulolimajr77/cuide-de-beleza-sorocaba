@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuide de Sua Beleza — Danní Rodrigues | Flow Lips e Estética Facial em Sorocaba</title>
+  <meta name="description" content="Espaço Cuide de Sua Beleza por Danní Rodrigues em Sorocaba/SP. Flow Lips (nanopigmentação labial), Flow Brows, microagulhamento, limpeza de pele e nutrição Herbalife, com avaliação individual e hora marcada." />
+  <link rel="icon" href="logo-dourado.png" type="image/png" />
+
+  <!-- Animações: só esconde conteúdo se o JS e o GSAP realmente carregarem -->
+  <script>
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('js');
+      setTimeout(function () { if (!window.__animReady) document.documentElement.classList.remove('js'); }, 4000);
+    }
+  </script>
+
+
+  <!-- SEO local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Espaço Cuide de Sua Beleza | Danní Rodrigues",
+    "description": "Clínica de estética em Sorocaba: Flow Lips, Flow Brows, microagulhamento, limpeza de pele e nutrição Herbalife.",
+    "telephone": "+55-15-98111-3440",
+    "sameAs": ["https://www.instagram.com/cuidedesuabelezasorocaba"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Mario Campolim, 560",
+      "addressLocality": "Sorocaba",
+      "addressRegion": "SP",
+      "postalCode": "18047-600",
+      "addressCountry": "BR"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": -23.5273884, "longitude": -47.4621041 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "13:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            naval: {
+              DEFAULT: '#070B11',
+              900: '#080D14',
+              800: '#0E141E',
+              700: '#141D2B',
+              600: '#1D2A3D',
+            },
+            gold: {
+              DEFAULT: '#C9A96E',
+              light: '#DFC08A',
+              hover: '#E5C48A',
+              dark: '#A8834A',
+              solid: '#D5B070',
+            },
+            cream: '#F7F3EB',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            script: ['"Great Vibes"', 'cursive'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { background-color: #080D14; scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', system-ui, sans-serif; background-color: #080D14; color: #F7F3EB; overflow-x: hidden; }
+    section[id] { scroll-margin-top: 72px; }
+
+    /* Custom typography */
+    .font-script { font-family: 'Great Vibes', cursive; }
+    .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+    /* Divider */
+    .divider-gold {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,169,110,0.35), #C9A96E, rgba(201,169,110,0.35), transparent);
+    }
+
+    /* Navbar Glass */
+    .navbar-glass {
+      background: rgba(7, 11, 17, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(201, 169, 110, 0.12);
+    }
+
+    /* Hero Background & Gradient Overlays */
+    .hero-bg-container {
+      position: relative;
+      background-color: #080D14;
+    }
+    .hero-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 68% 18%;
+      filter: contrast(1.02) brightness(1.0);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(7, 11, 17, 0.98) 0%,
+        rgba(7, 11, 17, 0.92) 28%,
+        rgba(7, 11, 17, 0.65) 50%,
+        rgba(7, 11, 17, 0.25) 75%,
+        rgba(7, 11, 17, 0.15) 100%
+      );
+      pointer-events: none;
+    }
+    @media (max-width: 1023px) {
+      .hero-overlay {
+        background: linear-gradient(180deg, rgba(7,11,17,0.55) 0%, rgba(7,11,17,0.86) 45%, rgba(7,11,17,0.96) 100%);
+      }
+    }
+    .hero-bottom-fade {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 140px;
+      background: linear-gradient(to top, #080D14 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    /* Luxury Buttons */
+    .btn-gold-solid {
+      background-color: #D5B070;
+      color: #070B11;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      transition: background-color .3s ease, box-shadow .3s ease, translate .3s ease;
+    }
+    .btn-gold-solid:hover {
+      background-color: #E5C48A;
+      box-shadow: 0 0 25px rgba(213, 176, 112, 0.45);
+      translate: 0 -1px;
+    }
+    .btn-gold-outline {
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #FFFFFF;
+      letter-spacing: 0.14em;
+      background: rgba(7, 11, 17, 0.4);
+      backdrop-filter: blur(8px);
+      transition: background-color .3s ease, border-color .3s ease, color .3s ease, box-shadow .3s ease;
+    }
+    .btn-gold-outline:hover {
+      border-color: #C9A96E;
+      color: #DFC08A;
+      background: rgba(201, 169, 110, 0.1);
+      box-shadow: 0 0 20px rgba(201, 169, 110, 0.2);
+    }
+
+    /* Faixa de diferenciais */
+    .qnav-cell {
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+      transition: background-color .3s ease;
+      background: #080D14;
+    }
+    .qnav-cell:hover { background: rgba(20, 29, 43, 0.6); }
+    .qnav-cell:hover .qnav-icon { color: #DFC08A; transform: scale(1.08); }
+    .qnav-cell:hover .qnav-title { color: #DFC08A; }
+
+    /* Vertical Cards */
+    .v-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: transform 0.4s ease, border-color 0.4s ease;
+      border: 1px solid rgba(201, 169, 110, 0.1);
+    }
+    .v-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(201, 169, 110, 0.4);
+      box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.8);
+    }
+    .v-card img { transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+    .v-card:hover img { transform: scale(1.08); }
+    .v-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(7, 11, 17, 0.96) 0%,
+        rgba(7, 11, 17, 0.6) 45%,
+        rgba(7, 11, 17, 0.1) 85%,
+        transparent 100%
+      );
+    }
+
+    /* Featured Lip Card */
+    .featured-lip-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 2px;
+      border: 1px solid rgba(201, 169, 110, 0.18);
+    }
+    .featured-lip-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(7, 11, 17, 0.96) 0%,
+        rgba(7, 11, 17, 0.82) 42%,
+        rgba(7, 11, 17, 0.25) 75%,
+        transparent 100%
+      );
+    }
+
+    /* Cards de conteúdo */
+    .info-card {
+      background: linear-gradient(180deg, rgba(20,29,43,0.55), rgba(14,20,30,0.55));
+      border: 1px solid rgba(201,169,110,0.14);
+      border-radius: 2px;
+      transition: border-color .3s ease, translate .3s ease;
+    }
+    .info-card:hover { border-color: rgba(201,169,110,0.4); translate: 0 -2px; }
+
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .faq-item summary { cursor: pointer; list-style: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item[open] .faq-plus { transform: rotate(45deg); }
+    .faq-plus { transition: transform .3s ease; }
+
+
+    /* ===== Lenis ===== */
+    html.lenis, html.lenis body { height: auto; }
+    html.lenis.lenis-smooth { scroll-behavior: auto !important; }
+    html.lenis.lenis-stopped { overflow: clip; }
+    html.lenis.lenis-smooth iframe { pointer-events: none; }
+
+    /* ===== Estados iniciais das animações (só com .js) ===== */
+    .js [data-reveal],
+    .js [data-hero],
+    .js [data-split],
+    .js [data-stagger] > *:not([data-split]) { opacity: 0; }
+    .js [data-write] { clip-path: inset(-30% 100% -30% -6%); }
+    .w { display: inline-block; will-change: transform, opacity; }
+
+    /* ===== Acordeão de serviços ===== */
+    .acc { display: flex; flex-direction: column; gap: .5rem; }
+    .acc-panel {
+      position: relative; overflow: hidden; flex: none; height: 76px;
+      border-radius: 2px; border: 1px solid rgba(201,169,110,.14); background: #0E141E;
+      transition: height .6s cubic-bezier(.22,.8,.2,1), border-color .4s ease;
+    }
+    .acc-panel.is-active { height: 410px; border-color: rgba(201,169,110,.45); }
+    .acc-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(var(--z, 1)); filter: brightness(.7) saturate(.95);
+      transition: transform 1.6s cubic-bezier(.16,1,.3,1), filter .8s ease; }
+    /* hover / aberto: zoom bem leve + mais claridade */
+    .acc-panel.is-active .acc-img, .acc-panel:hover .acc-img { transform: scale(calc(var(--z, 1) * 1.09)); filter: brightness(1.06) saturate(1.05); }
+    /* brilho dourado no topo do card + halo ao redor */
+    .acc-panel::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: 0; mix-blend-mode: screen;
+      background: radial-gradient(120% 70% at 50% 0%, rgba(255,226,170,.30), rgba(255,226,170,.06) 45%, transparent 70%);
+      transition: opacity .8s ease; }
+    .acc-panel { transition: height .6s cubic-bezier(.22,.8,.2,1), border-color .4s ease, box-shadow .7s ease; }
+    .acc-panel.is-active, .acc-panel:hover { z-index: 2; border-color: rgba(223,192,138,.6);
+      box-shadow: 0 0 0 1px rgba(223,192,138,.25), 0 14px 60px -10px rgba(213,176,112,.38), 0 0 34px -6px rgba(213,176,112,.25); }
+    .acc-panel.is-active::after, .acc-panel:hover::after { opacity: 1; }
+    .acc-shade { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, rgba(7,11,17,.97) 0%, rgba(7,11,17,.72) 42%, rgba(7,11,17,.12) 80%, transparent 100%); }
+    .acc-trigger {
+      position: absolute; inset: 0; width: 100%; display: flex; align-items: center; gap: 14px;
+      padding: 0 18px; text-align: left; background: transparent; border: 0; cursor: pointer; color: #fff;
+      transition: opacity .3s ease;
+    }
+    .acc-trigger:focus-visible { outline: 2px solid #DFC08A; outline-offset: -4px; }
+    .acc-panel.is-active .acc-trigger { opacity: 0; }
+    .acc-ic { width: 36px; height: 36px; flex: none; border-radius: 999px; border: 1px solid rgba(201,169,110,.45); background: rgba(8,13,20,.8); display: flex; align-items: center; justify-content: center; color: #DFC08A; }
+    .acc-vt { font: 700 .68rem/1.2 'DM Sans', sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+    .acc-plus { margin-left: auto; color: #DFC08A; font-size: 1.4rem; line-height: 1; }
+    .acc-body {
+      position: absolute; left: 0; right: 0; bottom: 0; padding: 1.5rem; z-index: 2;
+      opacity: 0; visibility: hidden; transform: translateY(14px);
+      transition: opacity .45s ease, transform .55s cubic-bezier(.22,.8,.2,1), visibility 0s linear .45s;
+    }
+    .acc-panel.is-active .acc-body { opacity: 1; visibility: visible; transform: none; transition-delay: .22s, .22s, 0s; }
+    .acc-link { display: inline-flex; align-items: center; gap: .6rem; font: 600 .65rem/1 'DM Sans', sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #DFC08A; padding: .75rem 0; border-bottom: 1px solid rgba(201,169,110,.45); transition: color .3s, border-color .3s; }
+    .acc-link:hover { color: #fff; border-color: #fff; }
+
+    @media (min-width: 1024px) {
+      .acc { flex-direction: row; gap: .5rem; height: 100%; min-height: 520px; }
+      .acc-panel { height: auto; flex: 1 1 0; min-width: 0; transition: flex .7s cubic-bezier(.22,.8,.2,1), border-color .4s ease, box-shadow .7s ease; }
+      .acc-panel.is-active { height: auto; flex: 4.2 1 0; }
+      .acc-trigger { flex-direction: column; justify-content: flex-end; align-items: center; padding: 0 0 22px; gap: 16px; }
+      .acc-vt { writing-mode: vertical-rl; transform: rotate(180deg); }
+      .acc-plus { display: none; }
+      /* texto com largura fixa (= largura final do painel): não reflui enquanto o painel anima.
+         Cada linha entra em cascata só depois que o painel termina de abrir. */
+      .acc-body { padding: 1.75rem; width: var(--acc-w, 320px); opacity: 1; transform: none; transition: visibility 0s linear .18s; }
+      .acc-panel.is-active .acc-body { transition-delay: 0s; }
+      .acc-body > * { opacity: 0; transform: translateY(12px); transition: opacity .16s ease, transform .16s ease; }
+      .acc-panel.is-active .acc-body > * { opacity: 1; transform: none;
+        transition: opacity .75s ease var(--d, .45s), transform .9s cubic-bezier(.22,.8,.2,1) var(--d, .45s); }
+      .acc-panel.is-active .acc-body > :nth-child(1) { --d: .45s; }
+      .acc-panel.is-active .acc-body > :nth-child(2) { --d: .53s; }
+      .acc-panel.is-active .acc-body > :nth-child(3) { --d: .61s; }
+      .acc-panel.is-active .acc-body > :nth-child(4) { --d: .69s; }
+      .acc-panel.is-active .acc-body > :nth-child(5) { --d: .77s; }
+    }
+
+    /* ===== Bento dos procedimentos ===== */
+    .bento { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    .bento-card { position: relative; overflow: hidden; display: flex; flex-direction: column; padding: 1.75rem; }
+    .bento-card::after { content: ''; position: absolute; top: -45%; right: -30%; width: 75%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(201,169,110,.11), transparent 65%); pointer-events: none; opacity: .55; transition: opacity .4s ease; }
+    .bento-card:hover::after { opacity: 1; }
+    .bento-card { transition: border-color .3s ease, translate .3s ease, box-shadow .5s ease; }
+    .bento-card:hover { box-shadow: 0 14px 48px -14px rgba(213,176,112,.28); }
+    .bento-card > * { position: relative; z-index: 1; }
+    .bento-tag { font: 600 .58rem/1.2 'DM Sans', sans-serif; letter-spacing: .24em; text-transform: uppercase; color: #C9A96E; }
+    .bento-ic { width: 52px; height: 52px; border-radius: 999px; flex: none; display: flex; align-items: center; justify-content: center; color: #DFC08A;
+      border: 1px solid rgba(201,169,110,.4); background: radial-gradient(circle at 30% 25%, rgba(201,169,110,.22), rgba(201,169,110,.04) 70%); }
+    .bento-ideal { margin-top: auto; padding-top: .9rem; border-top: 1px solid rgba(255,255,255,.08); font: 400 .72rem/1.55 'DM Sans', sans-serif; color: rgba(255,255,255,.5); }
+    .bento-ideal b { color: #C9A96E; text-transform: uppercase; letter-spacing: .18em; font-weight: 600; margin-right: .35rem; }
+    .bento-feature { background: linear-gradient(160deg, rgba(201,169,110,.10), rgba(14,20,30,.6) 60%); border-color: rgba(201,169,110,.3); }
+
+    /* cards largos: texto + foto */
+    .bento-split { padding: 0; display: grid; grid-template-columns: 1fr; }
+    .bento-split .bs-text { padding: 1.75rem; display: flex; flex-direction: column; }
+    .bento-split .bs-img { position: relative; min-height: 190px; order: -1; overflow: hidden; }
+    .bento-split .bs-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1s cubic-bezier(.16,1,.3,1); }
+    .bento-split:hover .bs-img img { transform: scale(1.05); }
+    .bento-split .bs-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(14,20,30,.05), rgba(12,18,27,.92)); }
+    .bento-split::after { display: none; }
+
+    @media (min-width: 768px) {
+      .bento { grid-template-columns: repeat(2, 1fr); }
+      .bento .wide { grid-column: span 2; }
+      .bento-split { grid-template-columns: 1.2fr .8fr; }
+      .bento-split .bs-img { order: 0; min-height: 0; }
+      .bento-split .bs-img::after { background: linear-gradient(90deg, rgba(12,18,27,.96) 0%, rgba(12,18,27,.25) 55%, transparent 100%); }
+      .bento-split.flip { grid-template-columns: .8fr 1.2fr; }
+      .bento-split.flip .bs-img { order: -1; }
+      .bento-split.flip .bs-img::after { background: linear-gradient(270deg, rgba(12,18,27,.96) 0%, rgba(12,18,27,.25) 55%, transparent 100%); }
+    }
+    @media (min-width: 1024px) {
+      .bento { grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(310px, auto);
+        grid-template-areas: "a a b c" "d e f f" "g g h h"; }
+      .bento .wide { grid-column: auto; }
+      .bento > .ba { grid-area: a; } .bento > .bb { grid-area: b; } .bento > .bc { grid-area: c; }
+      .bento > .bd { grid-area: d; } .bento > .be { grid-area: e; } .bento > .bf { grid-area: f; }
+      .bento > .bg { grid-area: g; } .bento > .bh { grid-area: h; }
+    }
+
+    /* ===== Antes e depois (comparador) ===== */
+    .ba-card { padding: 14px 14px 10px; border: 1px solid rgba(201,169,110,.28); border-radius: 2px;
+      background: linear-gradient(160deg, rgba(201,169,110,.08), rgba(14,20,30,.7) 55%); box-shadow: 0 24px 60px -24px rgba(0,0,0,.8); }
+    .ba-slider { --pos: 50%; position: relative; overflow: hidden; aspect-ratio: 828 / 940; border-radius: 1px; touch-action: pan-y; user-select: none; }
+    .ba-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+    .ba-before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+    .ba-handle { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; margin-left: -1px; background: linear-gradient(to bottom, transparent, #DFC08A 12%, #DFC08A 88%, transparent); pointer-events: none; box-shadow: 0 0 18px rgba(223,192,138,.55); }
+    .ba-handle::after { content: ''; position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 999px;
+      background: rgba(8,13,20,.78) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23DFC08A' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l-6 6 6 6M15 6l6 6-6 6'/%3E%3C/svg%3E") center / 22px no-repeat;
+      border: 1px solid rgba(223,192,138,.75); backdrop-filter: blur(6px); box-shadow: 0 6px 24px rgba(0,0,0,.5); }
+    .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; -webkit-appearance: none; appearance: none; touch-action: pan-y; }
+    .ba-slider:focus-within .ba-handle::after { outline: 2px solid #DFC08A; outline-offset: 3px; }
+    .ba-badge { position: absolute; bottom: 12px; padding: .45rem .8rem; font: 700 .6rem/1 'DM Sans', sans-serif; letter-spacing: .24em; text-transform: uppercase;
+      color: #fff; background: rgba(7,11,17,.72); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,.2); pointer-events: none; left: 12px; }
+    .ba-badge-gold { color: #070B11; background: #D5B070; border-color: #D5B070; left: auto; right: 12px; }
+    .ba-cap { margin: 10px 0 0; text-align: center; font: 500 .62rem/1.4 'DM Sans', sans-serif; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.42); }
+
+    /* ===== FAQ animado ===== */
+    .faq-item summary span:first-child { transition: color .3s ease; }
+    .faq-item summary:hover span:first-child { color: #DFC08A; }
+    .faq-a { overflow: hidden; }
+    .faq-item.is-closing .faq-plus { transform: none; }
+
+    /* Altura de linha dos títulos: as classes text-4xl/text-5xl do Tailwind fixam line-height em px
+       e anulavam o leading-[..]; aqui a proporção passa a valer em qualquer largura */
+    h2[data-split], h2.font-serif { line-height: 1.16; }
+    /* quebra de linha equilibrada: sem palavra sozinha na última linha */
+    h1, h2, h3, blockquote, .font-serif.italic { text-wrap: balance; }
+    p, li, dd, dt, address { text-wrap: pretty; }
+    .info-card p { text-wrap: pretty; }
+    .bento-card p, .acc-body p, .review-card blockquote, #flowlips .info-card p { text-wrap: balance; }
+    .bento h3 { line-height: 1.2; }
+    .bento-tag { line-height: 1.4; }
+
+        /* ===== Cintilar (brilhinhos sutis no hover) ===== */
+    .info-card { position: relative; }
+    .sparkle-halo { position: absolute; left: 0; top: 0; width: 0; height: 0; overflow: visible; pointer-events: none; z-index: 4; }
+    .sparkle-layer { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+    .bento-card > .sparkle-layer, .info-card > .sparkle-layer { z-index: 0; }
+    .sparkle { position: absolute; width: var(--s); height: var(--s); margin: calc(var(--s) / -2) 0 0 calc(var(--s) / -2); border-radius: 50%; opacity: 0;
+      background: radial-gradient(circle, #fff 0, #ffe6ae 24%, rgba(255,220,150,0) 64%);
+      animation: twinkle var(--d) ease-in-out forwards; }
+    .sparkle::before, .sparkle::after { content: ''; position: absolute; left: 50%; top: 50%; }
+    .sparkle::before { width: calc(var(--s) * 3.4); height: 1px; margin-left: calc(var(--s) * -1.7); background: linear-gradient(90deg, transparent, #fff3d2, transparent); }
+    .sparkle::after { width: 1px; height: calc(var(--s) * 3.4); margin-top: calc(var(--s) * -1.7); background: linear-gradient(180deg, transparent, #fff3d2, transparent); }
+    @keyframes twinkle {
+      0%   { opacity: 0;   transform: scale(.2) rotate(0deg); }
+      40%  { opacity: .9;  transform: scale(1) rotate(45deg); }
+      100% { opacity: 0;   transform: scale(.3) rotate(90deg); }
+    }
+
+    /* ===== Seção em dourado (alterna o azul da página) ===== */
+    .section-gold { position: relative; color: #0B111A;
+      background:
+        radial-gradient(80% 110% at 8% 0%, rgba(255,247,226,.22), transparent 70%),
+        linear-gradient(135deg, #F0E2BC 0%, #EDDDB3 55%, #E9D6AA 100%);
+      border-top: 1px solid rgba(255,255,255,.25); border-bottom: 1px solid rgba(11,17,26,.2); }
+    .gold-eyebrow { color: #6A4A12; }
+    .gold-title { color: #0B111A; }
+    .gold-em { color: #7A5515; }
+    .gold-text { color: rgba(11,17,26,.92); font-weight: 400; }
+    .gold-text-soft { color: rgba(11,17,26,.7); font-weight: 400; }
+    .gold-strong { color: #0B111A; font-weight: 700; }
+    .btn-blue { background: #0B111A; color: #E9CE94; border: 1px solid #0B111A; transition: background-color .3s ease, color .3s ease, box-shadow .3s ease, translate .3s ease; }
+    .btn-blue:hover { background: #161F2D; color: #fff; box-shadow: 0 10px 28px -8px rgba(11,17,26,.55); translate: 0 -1px; }
+    .btn-dark-outline { color: #0B111A; border: 1px solid rgba(11,17,26,.55); background: transparent; transition: background-color .3s ease, color .3s ease, border-color .3s ease; }
+    .btn-dark-outline:hover { background: #0B111A; color: #E9CE94; border-color: #0B111A; }
+    .section-gold .ba-card { background: #070B11; border-color: rgba(11,17,26,.6); box-shadow: 0 30px 60px -28px rgba(11,17,26,.6), 0 0 0 1px rgba(255,255,255,.22); }
+    .section-gold .ba-card::after { display: none; }
+
+    /* ===== Onde estamos ===== */
+    .loc-ic { width: 44px; height: 44px; flex: none; border-radius: 999px; display: flex; align-items: center; justify-content: center; color: #DFC08A;
+      border: 1px solid rgba(201,169,110,.4); background: radial-gradient(circle at 30% 25%, rgba(201,169,110,.22), rgba(201,169,110,.04) 70%); }
+    .map-frame { position: relative; min-height: 340px; overflow: hidden; border-radius: 2px; border: 1px solid rgba(201,169,110,.3);
+      box-shadow: 0 24px 60px -28px rgba(0,0,0,.8); background: #0E141E; }
+    .map-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; pointer-events: none;
+      filter: grayscale(.35) invert(.92) hue-rotate(180deg) contrast(.92) brightness(.95) sepia(.18); }
+    .map-frame.is-active iframe { pointer-events: auto; }
+    .map-frame::after { content: ''; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 60px rgba(8,13,20,.55); }
+    .map-hint { position: absolute; right: 12px; bottom: 12px; z-index: 2; padding: .45rem .75rem; font: 600 .58rem/1 'DM Sans', sans-serif; letter-spacing: .18em; text-transform: uppercase;
+      color: #DFC08A; background: rgba(7,11,17,.75); backdrop-filter: blur(6px); border: 1px solid rgba(201,169,110,.35); pointer-events: none; transition: opacity .3s ease; }
+    .map-frame.is-active .map-hint { opacity: 0; }
+    @media (min-width: 1024px) { .map-frame { min-height: 100%; } }
+    @media (max-width: 1023px) { .map-frame { height: 360px; } }
+
+    /* ===== Rodapé ===== */
+    .site-footer::before { content: ''; position: absolute; left: 50%; top: -240px; width: 900px; height: 420px; transform: translateX(-50%); pointer-events: none;
+      background: radial-gradient(closest-side, rgba(201,169,110,.10), transparent 70%); }
+    .foot-title { font: 600 .62rem/1 'DM Sans', sans-serif; letter-spacing: .28em; text-transform: uppercase; color: #C9A96E; margin: 0 0 1.4rem; }
+    .foot-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; }
+    .foot-list a { font: 300 .875rem/1.4 'DM Sans', sans-serif; color: rgba(255,255,255,.6); transition: color .3s ease, padding-left .3s ease; }
+    .foot-list a:hover { color: #DFC08A; padding-left: .35rem; }
+    .foot-social { width: 42px; height: 42px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; color: rgba(255,255,255,.75);
+      border: 1px solid rgba(255,255,255,.2); transition: color .3s ease, border-color .3s ease, background-color .3s ease; }
+    .foot-social:hover { color: #DFC08A; border-color: #C9A96E; background: rgba(201,169,110,.1); }
+
+    /* ===== Avaliações ===== */
+    .review-card { overflow: hidden; }
+    .review-mark { position: absolute; top: .4rem; right: 1.6rem; font-family: 'Cormorant Garamond', serif; font-size: 8rem; line-height: 1; color: rgba(201,169,110,.12); pointer-events: none; }
+    .review-avatar { width: 44px; height: 44px; flex: none; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center;
+      font: 600 1.05rem/1 'Cormorant Garamond', serif; color: #DFC08A; border: 1px solid rgba(201,169,110,.45);
+      background: radial-gradient(circle at 30% 25%, rgba(201,169,110,.25), rgba(201,169,110,.05) 70%); }
+
+    /* Link ativo do menu */
+    .nav-link { padding-bottom: 4px; border-bottom: 1px solid transparent; transition: color .3s ease, border-color .3s ease; }
+    .nav-link:hover { color: #fff; }
+    .nav-link.is-current { color: #fff; border-bottom-color: #C9A96E; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #070B11; }
+    ::-webkit-scrollbar-thumb { background: rgba(201, 169, 110, 0.3); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(201, 169, 110, 0.6); }
+  </style>
+</head>
+
+<body class="selection:bg-gold selection:text-naval">
+
+<!-- Ícones próprios de cada serviço (traço fino, 48x48) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-brows" viewBox="0 0 48 48">
+      <path d="M8 19C15 9 32 7 41 17"/>
+      <path d="M11 24c3-3 8-5 13-5" opacity=".5"/>
+      <path d="M9 32c4-6 10-9 15-9s11 3 15 9c-4 6-10 9-15 9S13 38 9 32z"/>
+      <circle cx="24" cy="32" r="4"/>
+    </symbol>
+    <symbol id="i-faceup" viewBox="0 0 48 48">
+      <path d="M33 5l10 10-21 21-11 2 2-11z"/>
+      <path d="M28 10l10 10" opacity=".55"/>
+      <circle cx="9" cy="43" r="1.2" fill="currentColor"/>
+      <circle cx="15" cy="43" r="1.2" fill="currentColor"/>
+      <circle cx="21" cy="43" r="1.2" fill="currentColor"/>
+      <circle cx="27" cy="43" r="1.2" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-hidra" viewBox="0 0 48 48">
+      <path d="M6 28c5-8 11-9 18-5 7-4 13-3 18 5-5 7-12 10-18 10S11 35 6 28z"/>
+      <path d="M6 28c9 3 27 3 36 0" opacity=".55"/>
+      <path d="M39 4c-3.5 4.5-5 7-5 9.5a5 5 0 0010 0c0-2.500-1.500-5-5-9.500z"/>
+    </symbol>
+    <symbol id="i-shine" viewBox="0 0 48 48">
+      <path d="M22 6l3.600 10.400L36 20l-10.400 3.600L22 34l-3.600-10.400L8 20l10.400-3.600z"/>
+      <path d="M38 28l1.600 4.400L44 34l-4.400 1.600L38 40l-1.600-4.400L32 34l4.400-1.600z" opacity=".7"/>
+      <path d="M38 5v6M35 8h6" opacity=".55"/>
+    </symbol>
+    <symbol id="i-derma" viewBox="0 0 48 48">
+      <path d="M6 41h36"/>
+      <path d="M13 41C10 31 12 21 20 11" />
+      <path d="M24 41c-1-11 2-21 11-31"/>
+      <path d="M35 41c1-7 4-13 9-17" opacity=".6"/>
+      <path d="M20 11c3 2 3 5 1 7" opacity=".5"/>
+    </symbol>
+    <symbol id="i-planing" viewBox="0 0 48 48">
+      <path d="M5 40l20-20"/>
+      <path d="M25 20l12-14 6 5-9 16z" />
+      <path d="M29 24l8 7" opacity=".5"/>
+      <path d="M8 12v6M5 15h6" opacity=".6"/>
+      <circle cx="14" cy="30" r="1.200" fill="currentColor" opacity=".6"/>
+    </symbol>
+    <symbol id="i-limpeza" viewBox="0 0 48 48">
+      <path d="M22 5C15 14 11 20 11 27a11 11 0 0022 0c0-7-4-13-11-22z"/>
+      <path d="M17 28a5 5 0 005 5" opacity=".6"/>
+      <circle cx="38" cy="13" r="3"/>
+      <circle cx="43" cy="24" r="2" opacity=".7"/>
+      <circle cx="36" cy="36" r="1.500" opacity=".6"/>
+    </symbol>
+    <symbol id="i-nutri" viewBox="0 0 48 48">
+      <path d="M12 15h24l-3 27H15z"/>
+      <path d="M13.500 26c4 2 7-2 11 0s7 2 10 0" opacity=".55"/>
+      <path d="M28 15l3-9h8"/>
+      <path d="M10 8c5 0 8 3 8 8-5 0-8-3-8-8z" opacity=".7"/>
+    </symbol>
+  </defs>
+</svg>
+
+
+<!-- ════════════════════════ NAVBAR ════════════════════════ -->
+<nav class="navbar-glass fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="max-w-[1520px] mx-auto px-6 lg:px-12 flex items-center justify-between h-[72px]">
+
+    <!-- Logo oficial (versão dourada) -->
+    <a href="#inicio" class="flex items-center" aria-label="Espaço Cuide de Sua Beleza — Danní Rodrigues">
+      <img src="logo-dourado.webp" alt="Espaço Cuide de Sua Beleza — Danní Rodrigues" class="h-[52px] w-auto" />
+    </a>
+
+    <!-- Menu Links -->
+    <ul class="hidden lg:flex items-center gap-9 text-[0.68rem] font-sans font-medium tracking-[0.24em] uppercase text-white/70">
+      <li><a href="#inicio" data-nav="inicio" class="nav-link is-current">INÍCIO</a></li>
+      <li><a href="#sobre" data-nav="sobre" class="nav-link">SOBRE</a></li>
+      <li><a href="#tratamentos" data-nav="tratamentos" class="nav-link">TRATAMENTOS</a></li>
+      <li><a href="#resultados" data-nav="resultados" class="nav-link">RESULTADOS</a></li>
+      <li><a href="#depoimentos" data-nav="depoimentos" class="nav-link">DEPOIMENTOS</a></li>
+      <li><a href="#contato" data-nav="contato" class="nav-link">CONTATO</a></li>
+    </ul>
+
+    <!-- Actions (WhatsApp Pill & Instagram Circle) -->
+    <div class="flex items-center gap-3">
+      <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
+         class="hidden sm:inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-white/25 hover:border-[#C9A96E] text-white hover:text-[#DFC08A] bg-white/5 hover:bg-[#C9A96E]/10 transition-all text-[0.62rem] font-sans font-medium tracking-[0.16em] uppercase">
+        <svg class="w-3.5 h-3.5 fill-current text-[#C9A96E]" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.508 5.823L.057 23.082a.75.75 0 00.921.921l5.259-1.451A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.95-1.353l-.354-.21-3.665 1.012 1.012-3.665-.21-.354A9.71 9.71 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+        <span>Agendar pelo WhatsApp</span>
+      </a>
+
+      <a href="https://www.instagram.com/cuidedesuabelezasorocaba" target="_blank" rel="noopener" aria-label="Instagram"
+         class="w-9 h-9 rounded-full border border-white/20 hover:border-[#C9A96E] flex items-center justify-center text-white/80 hover:text-[#DFC08A] hover:bg-[#C9A96E]/10 transition-all">
+        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button id="mob-btn" aria-label="Abrir menu" class="lg:hidden w-9 h-9 flex flex-col items-center justify-center gap-1.5 border border-white/20 rounded-full">
+        <span class="w-4 h-px bg-white transition-all"></span>
+        <span class="w-4 h-px bg-white transition-all"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Dropdown -->
+  <div id="mob-menu" class="hidden lg:hidden border-t border-white/10 bg-[#070B11]/98 px-6 py-6 backdrop-blur-2xl">
+    <ul class="flex flex-col gap-4 text-xs font-sans tracking-[0.2em] uppercase text-white/70">
+      <li><a href="#inicio" class="text-[#DFC08A]">Início</a></li>
+      <li><a href="#sobre" class="hover:text-white">Sobre</a></li>
+      <li><a href="#tratamentos" class="hover:text-white">Tratamentos</a></li>
+      <li><a href="#resultados" class="hover:text-white">Resultados</a></li>
+      <li><a href="#depoimentos" class="hover:text-white">Depoimentos</a></li>
+      <li><a href="#contato" class="hover:text-white">Contato</a></li>
+      <li class="pt-2">
+        <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank"
+           class="btn-gold-solid w-full flex items-center justify-center gap-2 py-3 rounded text-[0.65rem] uppercase">
+          Agendar pelo WhatsApp
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════ HERO SECTION ════════════════════════ -->
+<section id="inicio" class="hero-bg-container min-h-[92vh] flex items-center pt-[72px] overflow-hidden">
+
+  <img
+    src="assets-cliente/danni-rodrigues-hero.webp"
+    alt="Danní Rodrigues — Espaço Cuide de Sua Beleza"
+    class="hero-bg-img pointer-events-none"
+  />
+
+  <div class="hero-overlay"></div>
+  <div class="hero-bottom-fade"></div>
+
+  <!-- Hero Content Layer -->
+  <div class="max-w-[1520px] mx-auto px-6 lg:px-12 w-full relative z-20 py-20 lg:py-24">
+    <div class="max-w-2xl">
+
+      <div data-hero="label" class="flex items-center gap-3.5 mb-8">
+        <span class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.35em] uppercase opacity-90">
+          ESTÉTICA &nbsp;·&nbsp; BELEZA &nbsp;·&nbsp; AUTOCUIDADO
+        </span>
+        <div class="h-px w-14 bg-[rgba(201,169,110,0.5)]"></div>
+      </div>
+
+      <h1 data-hero="h1" class="font-serif leading-[1.08] tracking-tight">
+        <span class="block text-5xl sm:text-6xl lg:text-[5.2rem] text-white font-light drop-shadow-md">Seus lábios.</span>
+        <span class="block text-5xl sm:text-6xl lg:text-[5.2rem] text-[#DFC08A] font-light drop-shadow-md">Sua identidade.</span>
+      </h1>
+
+      <!-- Assinatura FlowLips, com respiro acima e abaixo -->
+      <div class="mt-5 sm:mt-6 mb-7 sm:mb-8">
+        <span data-write data-hero-write class="font-script inline-block text-[4.5rem] sm:text-[5.6rem] lg:text-[6.4rem] text-[#DFC08A] leading-[1.25] py-1 pr-4 drop-shadow-[0_4px_25px_rgba(201,169,110,0.45)]">
+          FlowLips
+        </span>
+      </div>
+
+      <p data-hero="p" class="font-sans font-light text-white/80 text-sm sm:text-base lg:text-[1.05rem] leading-[1.85] max-w-[500px] mb-10 drop-shadow">
+        Nanopigmentação labial que devolve cor, viço e uniformidade, sem contorno marcado e sem aspecto artificial. Só você, com mais vida, todos os dias.
+      </p>
+
+      <div data-hero="cta" class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+        <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
+           class="btn-gold-solid inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.68rem] uppercase shadow-xl">
+          <span>AGENDAR MINHA AVALIAÇÃO</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <a href="#como-funciona"
+           class="btn-gold-outline inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.68rem] uppercase shadow-lg">
+          <span>ENTENDER COMO FUNCIONA</span>
+          <svg class="w-3.5 h-3.5 text-[#C9A96E]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+
+      <p data-hero="hint" class="mt-6 text-[0.68rem] font-sans tracking-[0.18em] uppercase text-white/45">
+        Atendimento com hora marcada · Sorocaba/SP
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Assinatura de autoridade (canto superior direito) -->
+  <div data-hero="sig" class="hidden md:block absolute right-8 lg:right-16 top-32 lg:top-36 z-20 text-left pointer-events-none">
+    <p class="font-script text-3xl lg:text-[2.6rem] text-[#DFC08A] leading-[1.3] mb-1.5 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
+      Danní Rodrigues
+    </p>
+    <p class="text-[0.58rem] lg:text-[0.62rem] font-sans font-medium tracking-[0.24em] text-white/70 uppercase max-w-[210px] leading-[1.6] drop-shadow">
+      ESTÉTICA COM CONHECIMENTO, RESPONSABILIDADE E CUIDADO.
+    </p>
+  </div>
+
+</section>
+
+
+<!-- ════════════════════════ FAIXA DE DIFERENCIAIS (5 colunas) ════════════════════════ -->
+<section class="relative z-30 border-y border-[rgba(201,169,110,0.18)] bg-[#080D14]">
+  <div class="max-w-[1520px] mx-auto">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+
+      <div data-reveal class="qnav-cell py-7 px-4 flex flex-col items-center text-center">
+        <svg class="qnav-icon w-6 h-6 text-[#C9A96E] mb-3 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342"/></svg>
+        <span class="qnav-title font-sans text-[0.65rem] font-bold tracking-[0.2em] uppercase text-white/90 mb-1.5 transition-colors">Formação contínua</span>
+        <span class="font-sans text-[0.7rem] text-white/45 leading-snug">Método Flow Lips by Natalia Beauty</span>
+      </div>
+
+      <div data-reveal class="qnav-cell py-7 px-4 flex flex-col items-center text-center">
+        <svg class="qnav-icon w-6 h-6 text-[#C9A96E] mb-3 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span class="qnav-title font-sans text-[0.65rem] font-bold tracking-[0.2em] uppercase text-white/90 mb-1.5 transition-colors">Avaliação individual</span>
+        <span class="font-sans text-[0.7rem] text-white/45 leading-snug">Antes de qualquer procedimento</span>
+      </div>
+
+      <div data-reveal class="qnav-cell py-7 px-4 flex flex-col items-center text-center">
+        <svg class="qnav-icon w-6 h-6 text-[#C9A96E] mb-3 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+        <span class="qnav-title font-sans text-[0.65rem] font-bold tracking-[0.2em] uppercase text-white/90 mb-1.5 transition-colors">Biossegurança rigorosa</span>
+        <span class="font-sans text-[0.7rem] text-white/45 leading-snug">Materiais esterilizados</span>
+      </div>
+
+      <div data-reveal class="qnav-cell py-7 px-4 flex flex-col items-center text-center">
+        <svg class="qnav-icon w-6 h-6 text-[#C9A96E] mb-3 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+        <span class="qnav-title font-sans text-[0.65rem] font-bold tracking-[0.2em] uppercase text-white/90 mb-1.5 transition-colors">Atendimento humanizado</span>
+        <span class="font-sans text-[0.7rem] text-white/45 leading-snug">Escuta, cuidado e respeito</span>
+      </div>
+
+      <div data-reveal class="qnav-cell py-7 px-4 flex flex-col items-center text-center border-r-0 col-span-2 sm:col-span-1">
+        <svg class="qnav-icon w-6 h-6 text-[#C9A96E] mb-3 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+        <span class="qnav-title font-sans text-[0.65rem] font-bold tracking-[0.2em] uppercase text-white/90 mb-1.5 transition-colors">Hora marcada</span>
+        <span class="font-sans text-[0.7rem] text-white/45 leading-snug">Agenda limitada em Sorocaba/SP</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════ DESTAQUE FLOW LIPS + VITRINE DE CUIDADOS ════════════════════════ -->
+<section id="tratamentos" class="py-14 lg:py-16 bg-[#070B11]">
+  <div class="max-w-[1520px] mx-auto px-6 lg:px-12">
+
+    <div class="grid xl:grid-cols-[1.1fr_1.55fr] gap-3 items-stretch">
+
+      <!-- ────── ESQUERDA: CARD DESTAQUE FLOW LIPS ────── -->
+      <div class="featured-lip-card min-h-[460px] xl:min-h-[520px] flex items-center p-8 lg:p-12 relative">
+        <img
+          src="assets-cliente/flow-lips-macro.webp"
+          alt="Flow Lips — Nanopigmentação Labial em Sorocaba"
+          class="absolute inset-0 w-full h-full object-cover object-right"
+        />
+        <div class="featured-lip-overlay"></div>
+
+        <div class="relative z-10 max-w-[340px]">
+          <span class="block text-[#C9A96E] text-[0.62rem] font-sans font-semibold tracking-[0.3em] uppercase mb-4 opacity-95">
+            PROCEDIMENTO EM DESTAQUE
+          </span>
+
+          <h2 data-write class="font-script text-5xl lg:text-[4.2rem] text-white leading-[1.3] mb-4 drop-shadow-md">
+            FlowLips
+          </h2>
+
+          <p class="font-sans font-light text-white/75 text-xs lg:text-[0.88rem] leading-[1.85] mb-8">
+            Realce seus lábios sem perder a naturalidade. Mais harmonia, mais confiança, mais você.
+          </p>
+
+          <a href="#flowlips"
+             class="inline-flex items-center gap-2.5 px-6 py-3 rounded-[2px] border border-[#C9A96E]/60 hover:border-[#C9A96E] bg-[#C9A96E]/10 hover:bg-[#C9A96E]/20 text-white hover:text-[#DFC08A] text-[0.65rem] font-sans font-semibold tracking-[0.16em] uppercase transition-all duration-300">
+            <span>SAIBA MAIS</span>
+            <svg class="w-3 h-3 text-[#C9A96E]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- ────── DIREITA: ACORDEÃO DE SERVIÇOS (hover/foco/toque expande o painel) ────── -->
+      <div class="acc" data-reveal data-acc role="group" aria-label="Cuidados oferecidos no Espaço">
+
+        <div class="acc-panel" data-acc-panel>
+          <img class="acc-img" src="assets-cliente/olhar-flow-brows.webp" alt="Flow Brows" style="object-position:88% 45%" />
+          <div class="acc-shade"></div>
+          <button type="button" class="acc-trigger" aria-expanded="false" aria-label="Flow Brows: abrir detalhes">
+            <span class="acc-ic"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-brows"/></svg></span>
+            <span class="acc-vt">Flow Brows</span>
+            <span class="acc-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="acc-body">
+            <span class="block text-[#C9A96E] text-[0.58rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Sobrancelhas</span>
+            <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Flow Brows</h3>
+            <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">Sobrancelhas que valorizam o seu olhar. Sem exageros.</p>
+            <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Nanopigmentação individualizada: corrige falhas, redefine o desenho e entrega um efeito natural e harmônico.</p>
+            <a href="#c-flow-brows" class="acc-link"><span>Ver detalhes</span><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          </div>
+        </div>
+
+        <div class="acc-panel" data-acc-panel>
+          <img class="acc-img" src="assets-cliente/card-microagulhamento.webp" alt="Face Up" style="object-position:50% 38%" />
+          <div class="acc-shade"></div>
+          <button type="button" class="acc-trigger" aria-expanded="false" aria-label="Face Up: abrir detalhes">
+            <span class="acc-ic"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-faceup"/></svg></span>
+            <span class="acc-vt">Face Up</span>
+            <span class="acc-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="acc-body">
+            <span class="block text-[#C9A96E] text-[0.58rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Pele · Renovação</span>
+            <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Face Up</h3>
+            <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">A renovação que sua pele pede.</p>
+            <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Microagulhamento que estimula colágeno e elastina, potencializado por séruns específicos.</p>
+            <a href="#c-face-up" class="acc-link"><span>Ver detalhes</span><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          </div>
+        </div>
+
+        <div class="acc-panel" data-acc-panel>
+          <img class="acc-img" src="assets-cliente/spa-cuidado-facial.webp" alt="Limpeza de Pele" style="object-position:73% 50%" />
+          <div class="acc-shade"></div>
+          <button type="button" class="acc-trigger" aria-expanded="false" aria-label="Limpeza de Pele: abrir detalhes">
+            <span class="acc-ic"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-limpeza"/></svg></span>
+            <span class="acc-vt">Limpeza de Pele</span>
+            <span class="acc-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="acc-body">
+            <span class="block text-[#C9A96E] text-[0.58rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Pele · Essencial</span>
+            <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Limpeza de Pele</h3>
+            <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">O primeiro passo para uma pele saudável.</p>
+            <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Higienização profunda que remove cravos e impurezas e prepara a pele para os próximos tratamentos.</p>
+            <a href="#c-limpeza" class="acc-link"><span>Ver detalhes</span><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          </div>
+        </div>
+
+        <div class="acc-panel" data-acc-panel>
+          <img class="acc-img" src="assets-cliente/card-despigmentacao.webp" alt="Shine Face" style="object-position:50% 40%" />
+          <div class="acc-shade"></div>
+          <button type="button" class="acc-trigger" aria-expanded="false" aria-label="Shine Face: abrir detalhes">
+            <span class="acc-ic"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-shine"/></svg></span>
+            <span class="acc-vt">Shine Face</span>
+            <span class="acc-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="acc-body">
+            <span class="block text-[#C9A96E] text-[0.58rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Pele · Luminosidade</span>
+            <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Shine Face</h3>
+            <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">Pele iluminada. Textura uniforme.</p>
+            <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Tecnologia, ativos de alta qualidade e Dermaplaning: resultado visível já na primeira sessão.</p>
+            <a href="#c-shine-face" class="acc-link"><span>Ver detalhes</span><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          </div>
+        </div>
+
+        <div class="acc-panel" data-acc-panel>
+          <img class="acc-img" src="assets-cliente/dermaplaning-lamina.webp" alt="Dermaplaning" style="object-position:50% 42%" />
+          <div class="acc-shade"></div>
+          <button type="button" class="acc-trigger" aria-expanded="false" aria-label="Dermaplaning: abrir detalhes">
+            <span class="acc-ic"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-planing"/></svg></span>
+            <span class="acc-vt">Dermaplaning</span>
+            <span class="acc-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="acc-body">
+            <span class="block text-[#C9A96E] text-[0.58rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Pele · Textura</span>
+            <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Dermaplaning</h3>
+            <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">Pele mais lisa, luminosa e receptiva.</p>
+            <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Esfoliação com lâmina que remove células mortas e lanugem. Sem dor e sem tempo de recuperação.</p>
+            <a href="#c-dermaplaning" class="acc-link"><span>Ver detalhes</span><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          </div>
+        </div>
+
+        <div class="acc-panel" data-acc-panel>
+          <img class="acc-img" src="assets-cliente/card-nutricao-herbalife.webp" alt="Nutrição Herbalife" style="object-position:50% 45%" />
+          <div class="acc-shade"></div>
+          <button type="button" class="acc-trigger" aria-expanded="false" aria-label="Nutrição Herbalife: abrir detalhes">
+            <span class="acc-ic"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-nutri"/></svg></span>
+            <span class="acc-vt">Nutrição Herbalife</span>
+            <span class="acc-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="acc-body">
+            <span class="block text-[#C9A96E] text-[0.58rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Nutrição</span>
+            <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Nutrição Herbalife</h3>
+            <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">Beleza também se cuida de dentro pra fora.</p>
+            <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Shake Fórmula 1, Protein Complete, Skin Beauty Booster e Hype Drink.</p>
+            <a href="#c-herbalife" class="acc-link"><span>Ver detalhes</span><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Assinatura central inferior -->
+    <div class="flex items-center justify-center gap-4 mt-16 pt-6">
+      <span class="font-script text-[#DFC08A] text-3xl sm:text-4xl leading-[1.4]">Mais que estética,</span>
+      <span class="font-serif text-white tracking-[0.25em] uppercase text-sm sm:text-base font-light">É SOBRE VOCÊ.</span>
+      <div class="h-px w-14 sm:w-20 bg-[rgba(201,169,110,0.5)] hidden sm:block"></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════ SOBRE O ESPAÇO & DANNÍ RODRIGUES ════════════════════════ -->
+<section id="sobre" class="py-20 lg:py-28 bg-[#080D14] relative border-t border-white/5">
+  <div class="max-w-[1520px] mx-auto px-6 lg:px-12">
+    <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+
+      <div>
+        <div class="flex items-center gap-3.5 mb-6">
+          <div class="h-px w-8 bg-[#C9A96E]"></div>
+          <span class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.3em] uppercase">O Espaço &amp; A Especialista</span>
+        </div>
+
+        <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[3rem] text-white leading-[1.35] mb-7">
+          Cuidar da beleza de alguém é assumir uma <em class="text-[#DFC08A] italic">responsabilidade enorme.</em>
+        </h2>
+
+        <p data-reveal class="font-sans font-light text-white/70 text-sm sm:text-base leading-[1.85] mb-5">
+          No Espaço Cuide de Sua Beleza, cada atendimento começa com escuta, avaliação e respeito pela individualidade de quem chega. Não existe protocolo genérico: existe um olhar atento para o que você precisa, para o seu rosto, a sua rotina e a forma como você quer se sentir.
+        </p>
+
+        <p data-reveal class="font-sans font-light text-white/70 text-sm sm:text-base leading-[1.85] mb-5">
+          À frente de tudo está a <strong class="text-white font-medium">Danní Rodrigues</strong>, especialista em estética facial e nanopigmentação, formada no <strong class="text-white font-medium">Método Flow Lips by Natalia Beauty</strong> e com passagem pelo <strong class="text-white font-medium">Power Beauty 2026</strong>, em Alphaville. Ela acredita que nunca é hora de parar de aprender, e quem ganha com isso é você.
+        </p>
+
+        <p data-reveal class="font-sans font-light text-white/70 text-sm sm:text-base leading-[1.85] mb-8">
+          Antes de oferecer qualquer procedimento, ela mesma experimenta, estuda e valida. Porque cuidar com responsabilidade começa muito antes de qualquer agulha ou equipamento.
+        </p>
+
+        <div class="grid sm:grid-cols-3 gap-6 pt-6 border-t border-white/10">
+          <div>
+            <span class="block font-serif text-2xl text-[#DFC08A] mb-1">01.</span>
+            <span class="block font-sans text-xs uppercase tracking-wider font-semibold text-white">Conhecimento</span>
+            <span class="block font-sans text-[0.75rem] text-white/55 mt-1 leading-snug">Cursos, congressos e especializações constantes</span>
+          </div>
+          <div>
+            <span class="block font-serif text-2xl text-[#DFC08A] mb-1">02.</span>
+            <span class="block font-sans text-xs uppercase tracking-wider font-semibold text-white">Responsabilidade</span>
+            <span class="block font-sans text-[0.75rem] text-white/55 mt-1 leading-snug">Biossegurança, materiais esterilizados e produtos selecionados</span>
+          </div>
+          <div>
+            <span class="block font-serif text-2xl text-[#DFC08A] mb-1">03.</span>
+            <span class="block font-sans text-xs uppercase tracking-wider font-semibold text-white">Cuidado</span>
+            <span class="block font-sans text-[0.75rem] text-white/55 mt-1 leading-snug">Avaliação individual antes de qualquer procedimento</span>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal class="relative flex justify-center">
+        <div class="relative w-full max-w-[460px] rounded-2xl overflow-hidden border border-[#C9A96E]/25 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
+          <img
+            src="assets-cliente/danni-rodrigues-sobre.webp"
+            alt="Danní Rodrigues — Atendimento Exclusivo Sorocaba"
+            class="w-full h-auto object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#070B11] via-transparent to-transparent opacity-80"></div>
+
+          <div class="absolute bottom-6 left-6 right-6 p-5 rounded-xl bg-[#080D14]/85 backdrop-blur-md border border-[#C9A96E]/20">
+            <p class="font-serif italic text-white/90 text-base leading-relaxed mb-2">
+              “Aqui, a beleza sempre caminha ao lado da segurança, do conhecimento e do respeito pela sua identidade.”
+            </p>
+            <p class="font-script text-[#DFC08A] text-2xl leading-[1.3]">Danní Rodrigues</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════ A DOR: VOCÊ SE RECONHECE? ════════════════════════ -->
+<section id="para-voce" class="py-20 lg:py-28 bg-[#070B11] border-t border-white/5">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span data-reveal class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.3em] uppercase block mb-4">PARA VOCÊ</span>
+      <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[3rem] text-white leading-[1.35]">
+        Você se reconhece em <em class="text-[#DFC08A] italic">algum desses momentos?</em>
+      </h2>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-4">
+      <div data-reveal class="info-card p-8">
+        <span class="block font-serif text-4xl text-[#C9A96E]/70 mb-4 leading-none">01</span>
+        <h3 class="font-serif text-xl text-white mb-3 leading-snug">Olhar no espelho sem maquiagem e sentir que falta alguma coisa</h3>
+        <p class="font-sans font-light text-white/60 text-sm leading-[1.8]">Não é falta de beleza. Com o tempo, os lábios perdem cor e contorno e ficam com aspecto cansado, e o rosto perde expressão sem o batom certo.</p>
+      </div>
+      <div data-reveal class="info-card p-8">
+        <span class="block font-serif text-4xl text-[#C9A96E]/70 mb-4 leading-none">02</span>
+        <h3 class="font-serif text-xl text-white mb-3 leading-snug">Depender do batom o dia inteiro</h3>
+        <p class="font-sans font-light text-white/60 text-sm leading-[1.8]">No trabalho, na academia, no almoço de família: sempre a preocupação de conferir se a cor ainda está bonita, se sumiu, se manchou.</p>
+      </div>
+      <div data-reveal class="info-card p-8">
+        <span class="block font-serif text-4xl text-[#C9A96E]/70 mb-4 leading-none">03</span>
+        <h3 class="font-serif text-xl text-white mb-3 leading-snug">Ter medo do resultado artificial</h3>
+        <p class="font-sans font-light text-white/60 text-sm leading-[1.8]">Aquela boca marcada demais, que grita “fiz alguma coisa”. Por esse medo, o cuidado que seus lábios merecem vai sendo adiado.</p>
+      </div>
+    </div>
+
+    <p data-reveal class="text-center font-serif italic text-white/80 text-xl sm:text-2xl max-w-2xl mx-auto mt-14 leading-relaxed">
+      Não se trata de vaidade. Trata-se de querer se sentir completa mesmo nos momentos mais simples, sem depender de uma nécessaire para isso.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════ A SOLUÇÃO: FLOW LIPS ════════════════════════ -->
+<section id="flowlips" class="py-20 lg:py-28 bg-[#080D14] border-t border-white/5">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+
+    <div class="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-start">
+
+      <div>
+        <span data-reveal class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.3em] uppercase block mb-5">A SOLUÇÃO</span>
+        <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[3rem] text-white leading-[1.35] mb-3">
+          Seus lábios.
+        </h2>
+        <p class="font-serif font-light text-3xl sm:text-4xl lg:text-[3rem] text-[#DFC08A] italic leading-[1.35] mb-8">
+          Naturalmente mais bonitos.
+        </p>
+
+        <p data-reveal class="font-sans font-light text-white/75 text-sm sm:text-base leading-[1.9] mb-5">
+          O <strong class="text-white font-medium">Flow Lips</strong> é uma nanopigmentação labial que revitaliza a cor dos seus lábios, realçando a tonalidade natural, neutralizando manchas ou tons escurecidos e devolvendo o aspecto de lábio saudável e vivo.
+        </p>
+        <p data-reveal class="font-sans font-light text-white/75 text-sm sm:text-base leading-[1.9] mb-8">
+          Não é preenchimento, não é batom semipermanente e não tem aquela cara de “fiz um procedimento”. É a sua beleza, só que mais ela mesma.
+        </p>
+
+        <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Quero%20saber%20mais%20sobre%20o%20Flow%20Lips." target="_blank" rel="noopener"
+           class="btn-gold-solid inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.68rem] uppercase">
+          <span>QUERO SABER SOBRE O FLOW LIPS</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div data-reveal class="info-card p-7">
+          <div class="w-10 h-10 rounded-full border border-[#C9A96E]/40 flex items-center justify-center mb-5 text-[#DFC08A]">
+            <svg class="w-4.5 h-4.5 w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-serif text-xl text-white mb-2">Acorda pronta</h3>
+          <p class="font-sans font-light text-white/60 text-sm leading-[1.75]">Lábios com cor e vida logo pela manhã, sem precisar tocar na bolsa.</p>
+        </div>
+        <div data-reveal class="info-card p-7">
+          <div class="w-10 h-10 rounded-full border border-[#C9A96E]/40 flex items-center justify-center mb-5 text-[#DFC08A]">
+            <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg>
+          </div>
+          <h3 class="font-serif text-xl text-white mb-2">Pigmento sob medida</h3>
+          <p class="font-sans font-light text-white/60 text-sm leading-[1.75]">A tonalidade é escolhida pelo seu tom de pele e pelo que você deseja valorizar. Nada genérico.</p>
+        </div>
+        <div data-reveal class="info-card p-7">
+          <div class="w-10 h-10 rounded-full border border-[#C9A96E]/40 flex items-center justify-center mb-5 text-[#DFC08A]">
+            <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3.5C8.5 7.5 6 11 6 14.5a6 6 0 0012 0c0-3.5-2.5-7-6-11z"/></svg>
+          </div>
+          <h3 class="font-serif text-xl text-white mb-2">Hidratação que você sente</h3>
+          <p class="font-sans font-light text-white/60 text-sm leading-[1.75]">O procedimento estimula a regeneração da mucosa labial, deixando os lábios mais macios e nutridos.</p>
+        </div>
+        <div data-reveal class="info-card p-7">
+          <div class="w-10 h-10 rounded-full border border-[#C9A96E]/40 flex items-center justify-center mb-5 text-[#DFC08A]">
+            <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+          </div>
+          <h3 class="font-serif text-xl text-white mb-2">Resultado que parece natural</h3>
+          <p class="font-sans font-light text-white/60 text-sm leading-[1.75]">Sem contornos marcados e sem efeito pesado: só lábios mais uniformes, vivos e harmoniosos.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════ COMO FUNCIONA + FAQ ════════════════════════ -->
+<section id="como-funciona" class="py-20 lg:py-28 bg-[#070B11] border-t border-white/5">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span data-reveal class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.3em] uppercase block mb-4">COMO FUNCIONA</span>
+      <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[3rem] text-white leading-[1.35]">
+        Cada detalhe pensado para você, <em class="text-[#DFC08A] italic">desde o primeiro minuto.</em>
+      </h2>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-4 mb-20">
+      <div data-reveal class="info-card p-8">
+        <span class="block font-script text-5xl text-[#DFC08A] leading-[1.3] mb-2">1</span>
+        <h3 class="font-serif text-2xl text-white mb-3">Avaliação individual</h3>
+        <p class="font-sans font-light text-white/60 text-sm leading-[1.8]">Antes de qualquer coisa, existe uma conversa. A Danní analisa seu tom de pele, o estado dos lábios e o que você espera. Só então o pigmento é escolhido, para uma cor que se integra à sua beleza, não que compete com ela.</p>
+      </div>
+      <div data-reveal class="info-card p-8">
+        <span class="block font-script text-5xl text-[#DFC08A] leading-[1.3] mb-2">2</span>
+        <h3 class="font-serif text-2xl text-white mb-3">Aplicação confortável</h3>
+        <p class="font-sans font-light text-white/60 text-sm leading-[1.8]">A técnica usa agulha ultrafina, com anestésico tópico aplicado antes do procedimento. O desconforto é mínimo, sem dor intensa nem inchaço exagerado.</p>
+      </div>
+      <div data-reveal class="info-card p-8">
+        <span class="block font-script text-5xl text-[#DFC08A] leading-[1.3] mb-2">3</span>
+        <h3 class="font-serif text-2xl text-white mb-3">Resultado que evolui</h3>
+        <p class="font-sans font-light text-white/60 text-sm leading-[1.8]">Nos primeiros dias a cor aparece mais intensa. Na segunda semana você vê a cor real assentada, suave, exatamente como foi planejada. Sem surpresa: um processo cuidadoso que começa antes da aplicação.</p>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="max-w-3xl mx-auto">
+      <h3 class="font-serif text-2xl sm:text-3xl text-white text-center mb-8">Dúvidas frequentes</h3>
+
+      <details class="faq-item py-5">
+        <summary class="flex items-center justify-between gap-6">
+          <span class="font-serif text-lg sm:text-xl text-white">E se eu tiver medo de agulha?</span>
+          <span class="faq-plus text-[#C9A96E] text-2xl leading-none">+</span>
+        </summary>
+        <div class="faq-a"><p class="font-sans font-light text-white/60 text-sm leading-[1.8] pt-3 pr-10">A nanopigmentação usa agulhas muito mais finas que a micropigmentação tradicional, e a anestesia tópica é aplicada antes para garantir o seu conforto do início ao fim.</p></div>
+      </details>
+
+      <details class="faq-item py-5">
+        <summary class="flex items-center justify-between gap-6">
+          <span class="font-serif text-lg sm:text-xl text-white">E se a cor não ficar como eu imaginei?</span>
+          <span class="faq-plus text-[#C9A96E] text-2xl leading-none">+</span>
+        </summary>
+        <div class="faq-a"><p class="font-sans font-light text-white/60 text-sm leading-[1.8] pt-3 pr-10">A avaliação prévia existe exatamente para reduzir esse risco: você vê, decide e aprova antes de qualquer aplicação.</p></div>
+      </details>
+
+      <details class="faq-item py-5">
+        <summary class="flex items-center justify-between gap-6">
+          <span class="font-serif text-lg sm:text-xl text-white">Quanto tempo dura?</span>
+          <span class="faq-plus text-[#C9A96E] text-2xl leading-none">+</span>
+        </summary>
+        <div class="faq-a"><p class="font-sans font-light text-white/60 text-sm leading-[1.8] pt-3 pr-10">Em média de 1 a 2 anos, com variações conforme o tipo de pele. Um retoque pode ser feito para manter o resultado sempre fresco.</p></div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════ RESULTADOS ════════════════════════ -->
+<section id="resultados" class="section-gold py-20 lg:py-28">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+    <div class="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
+
+      <div data-reveal class="ba-card">
+        <div class="ba-slider" data-ba>
+          <img class="ba-img ba-after" src="assets-cliente/flow-lips-depois.webp" alt="Lábios depois do Flow Lips: cor revitalizada e aspecto saudável" />
+          <img class="ba-img ba-before" src="assets-cliente/flow-lips-antes.webp" alt="Lábios antes do Flow Lips: pálidos e sem uniformidade" />
+          <span class="ba-badge">Antes</span>
+          <span class="ba-badge ba-badge-gold">Depois</span>
+          <div class="ba-handle" aria-hidden="true"></div>
+          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Arraste para comparar o antes e o depois" />
+        </div>
+        <p class="ba-cap">Arraste para comparar · Imagem ilustrativa</p>
+      </div>
+
+      <div>
+        <span data-reveal class="gold-eyebrow text-[0.62rem] font-sans font-semibold tracking-[0.3em] uppercase block mb-5">RESULTADOS</span>
+        <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[2.8rem] gold-title leading-[1.35] mb-6">
+          Pequenos detalhes que fazem <em class="gold-em italic">uma grande diferença.</em>
+        </h2>
+        <p data-reveal class="font-sans text-sm sm:text-base leading-[1.9] mb-4 gold-text">
+          <strong class="gold-strong">Antes:</strong> lábios pálidos, sem uniformidade.<br />
+          <strong class="gold-strong">Depois:</strong> cor revitalizada, aspecto saudável e naturalidade completa.
+        </p>
+        <p data-reveal class="font-sans text-sm leading-[1.8] mb-8 gold-text-soft">
+          Uma aplicação mais precisa, um efeito mais suave. Lábios que parecem seus, porque são. Imagem ilustrativa; o resultado varia de pessoa para pessoa.
+        </p>
+        <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vi%20o%20antes%20e%20depois%20do%20Flow%20Lips%20e%20quero%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
+           class="btn-blue inline-flex items-center gap-2.5 px-6 py-3 rounded-[2px] text-[0.65rem] font-sans font-semibold tracking-[0.16em] uppercase">
+          <span>QUERO O MEU RESULTADO</span>
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════ DEPOIMENTOS ════════════════════════ -->
+<section id="depoimentos" class="py-20 lg:py-28 bg-[#070B11] border-t border-white/5">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span data-reveal class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.3em] uppercase block mb-4">DEPOIMENTOS</span>
+      <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[3rem] text-white leading-[1.35]">
+        Quem já viveu o cuidado <em class="text-[#DFC08A] italic">recomenda.</em>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4">
+      <figure data-reveal class="info-card review-card p-8 lg:p-10 flex flex-col">
+        <span class="review-mark" aria-hidden="true">&ldquo;</span>
+        <div class="flex gap-1 text-[#DFC08A]" role="img" aria-label="5 de 5 estrelas"><svg class="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg><svg class="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg><svg class="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg><svg class="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg><svg class="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg></div>
+        <blockquote class="font-serif italic font-light text-[1.45rem] sm:text-[1.65rem] leading-[1.4] text-white mt-5 mb-8">
+          &ldquo;Super indico, material de alta qualidade, lugar aconchegante, fui muito bem orientada sobre os procedimentos.&rdquo;
+        </blockquote>
+        <figcaption class="mt-auto flex items-center gap-4 pt-6 border-t border-white/[0.08]">
+          <span class="review-avatar" aria-hidden="true">C</span>
+          <span>
+            <span class="block font-sans text-sm font-medium text-white">Cristiane</span>
+            <span class="block font-sans text-[0.68rem] tracking-[0.18em] uppercase text-white/45 mt-1">Avaliação no Google</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <figure data-reveal class="info-card review-card p-8 lg:p-10 flex flex-col">
+        <span class="review-mark" aria-hidden="true">&ldquo;</span>
+        <div class="flex gap-1 text-[#DFC08A]" role="img" aria-label="5 de 5 estrelas"><svg class="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg><svg class="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg><svg class="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg><svg class="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg><svg class="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg></div>
+        <blockquote class="font-serif italic font-light text-[1.45rem] sm:text-[1.65rem] leading-[1.4] text-white mt-5 mb-8">
+          &ldquo;Excelente trabalho, a Danní é uma excelente profissional, muito competente e muito capacitada, o meu tratamento foi um sucesso.&rdquo;
+        </blockquote>
+        <figcaption class="mt-auto flex items-center gap-4 pt-6 border-t border-white/[0.08]">
+          <span class="review-avatar" aria-hidden="true">G</span>
+          <span>
+            <span class="block font-sans text-sm font-medium text-white">Gabriel F.</span>
+            <span class="block font-sans text-[0.68rem] tracking-[0.18em] uppercase text-white/45 mt-1">Avaliação no Google</span>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div data-reveal class="text-center mt-10">
+      <a href="https://share.google/KMeRvi8fQecKBlhaW" target="_blank" rel="noopener"
+         class="btn-gold-outline inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-[2px] text-[0.68rem] uppercase">
+        <span>Ver todas as avaliações no Google</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════ O CUIDADO COMPLETO ════════════════════════ -->
+<section id="cuidados" class="py-20 lg:py-28 bg-[#080D14] border-t border-white/5">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span data-reveal class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.3em] uppercase block mb-4">O CUIDADO COMPLETO</span>
+      <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[3rem] text-white leading-[1.35] mb-5">
+        Lábios são só o começo. <em class="text-[#DFC08A] italic">Cuidamos de você por inteiro.</em>
+      </h2>
+      <p data-reveal class="font-sans font-light text-white/60 text-sm sm:text-base leading-[1.85]">
+        Um portfólio completo pensado para valorizar a sua beleza natural, cada procedimento com avaliação individual, técnica atualizada e o cuidado que a Danní coloca em tudo o que faz.
+      </p>
+    </div>
+
+    <div class="bento" role="list">
+      <article data-reveal id="c-face-up" class="info-card bento-card bento-split ba wide bento-feature scroll-mt-24">
+        <div class="bs-text">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-faceup"/></svg></span>
+            <span class="bento-tag">Microagulhamento · Pele</span>
+          </div>
+          <h3 class="font-serif text-[1.85rem] text-white mb-1.5 leading-[1.15]">Face Up</h3>
+          <p class="font-serif italic text-[#DFC08A] text-[1.05rem] mb-3 leading-snug">A renovação que sua pele pede, de dentro para fora.</p>
+          <p class="font-sans font-light text-white/60 text-[0.82rem] leading-[1.75] mb-5">Microperfurações controladas estimulam colágeno e elastina, com séruns específicos para cada objetivo.</p>
+          <p class="bento-ideal"><b>Ideal para</b>cicatrizes de acne, linhas finas ou perda de firmeza.</p>
+        </div>
+        <div class="bs-img"><img src="assets-cliente/card-microagulhamento.webp" alt="Face Up Microagulhamento" style="object-position:50% 38%" /></div>
+      </article>
+
+      <article data-reveal id="c-flow-brows" class="info-card bento-card bb scroll-mt-24">
+        <div class="flex items-start justify-between gap-3 mb-6">
+          <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-brows"/></svg></span>
+          <span class="bento-tag text-right pt-1">Sobrancelhas</span>
+        </div>
+        <h3 class="font-serif text-2xl text-white mb-1.5 leading-[1.15]">Flow Brows</h3>
+        <p class="font-serif italic text-[#DFC08A] text-[0.98rem] mb-3 leading-snug">Sobrancelhas que valorizam o seu olhar.</p>
+        <p class="font-sans font-light text-white/60 text-[0.82rem] leading-[1.75] mb-5">Nanopigmentação individualizada: corrige falhas e redefine o desenho com efeito natural.</p>
+        <p class="bento-ideal"><b>Ideal para</b>falhas, assimetria ou desenho indefinido.</p>
+      </article>
+
+      <article data-reveal id="c-hidra-gloss" class="info-card bento-card bc scroll-mt-24">
+        <div class="flex items-start justify-between gap-3 mb-6">
+          <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-hidra"/></svg></span>
+          <span class="bento-tag text-right pt-1">Lábios</span>
+        </div>
+        <h3 class="font-serif text-2xl text-white mb-1.5 leading-[1.15]">Hidra Gloss</h3>
+        <p class="font-serif italic text-[#DFC08A] text-[0.98rem] mb-3 leading-snug">Para lábios que pedem macio e vida.</p>
+        <p class="font-sans font-light text-white/60 text-[0.82rem] leading-[1.75] mb-5">Hidratação labial profunda que devolve suavidade e protege contra ressecamento.</p>
+        <p class="bento-ideal"><b>Ideal para</b>lábios ressecados ou descamados.</p>
+      </article>
+
+      <article data-reveal id="c-shine-face" class="info-card bento-card bd scroll-mt-24">
+        <div class="flex items-start justify-between gap-3 mb-6">
+          <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-shine"/></svg></span>
+          <span class="bento-tag text-right pt-1">Pele · Luminosidade</span>
+        </div>
+        <h3 class="font-serif text-2xl text-white mb-1.5 leading-[1.15]">Shine Face</h3>
+        <p class="font-serif italic text-[#DFC08A] text-[0.98rem] mb-3 leading-snug">Pele iluminada. Textura uniforme.</p>
+        <p class="font-sans font-light text-white/60 text-[0.82rem] leading-[1.75] mb-5">Tecnologia, ativos de alta qualidade e Dermaplaning, com resultado visível já na primeira sessão.</p>
+        <p class="bento-ideal"><b>Ideal para</b>pele opaca, textura irregular ou manchas.</p>
+      </article>
+
+      <article data-reveal id="c-derma-brows" class="info-card bento-card be scroll-mt-24">
+        <div class="flex items-start justify-between gap-3 mb-6">
+          <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-derma"/></svg></span>
+          <span class="bento-tag text-right pt-1">Sobrancelhas</span>
+        </div>
+        <h3 class="font-serif text-2xl text-white mb-1.5 leading-[1.15]">Derma Brows</h3>
+        <p class="font-serif italic text-[#DFC08A] text-[0.98rem] mb-3 leading-snug">Fios mais saudáveis, fortes e definidos.</p>
+        <p class="font-sans font-light text-white/60 text-[0.82rem] leading-[1.75] mb-5">Protocolo que fortalece os fios e estimula o crescimento, ajudando no controle de queda.</p>
+        <p class="bento-ideal"><b>Ideal para</b>queda, falhas persistentes ou fios fracos.</p>
+      </article>
+
+      <article data-reveal id="c-dermaplaning" class="info-card bento-card bento-split bf wide flip scroll-mt-24">
+        <div class="bs-text">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-planing"/></svg></span>
+            <span class="bento-tag">Pele · Textura</span>
+          </div>
+          <h3 class="font-serif text-[1.85rem] text-white mb-1.5 leading-[1.15]">Dermaplaning</h3>
+          <p class="font-serif italic text-[#DFC08A] text-[1.05rem] mb-3 leading-snug">Pele nova. Mais lisa, mais luminosa, mais receptiva.</p>
+          <p class="font-sans font-light text-white/60 text-[0.82rem] leading-[1.75] mb-5">Esfoliação com lâmina específica que remove células mortas e lanugem. Sem dor e sem tempo de recuperação.</p>
+          <p class="bento-ideal"><b>Ideal para</b>pele opaca, áspera ou com excesso de lanugem.</p>
+        </div>
+        <div class="bs-img"><img src="assets-cliente/dermaplaning-lamina.webp" alt="Dermaplaning" style="object-position:50% 38%" /></div>
+      </article>
+
+      <article data-reveal id="c-limpeza" class="info-card bento-card bento-split bg wide scroll-mt-24">
+        <div class="bs-text">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-limpeza"/></svg></span>
+            <span class="bento-tag">Pele · Essencial</span>
+          </div>
+          <h3 class="font-serif text-[1.85rem] text-white mb-1.5 leading-[1.15]">Limpeza de Pele</h3>
+          <p class="font-serif italic text-[#DFC08A] text-[1.05rem] mb-3 leading-snug">O primeiro passo para uma pele realmente saudável.</p>
+          <p class="font-sans font-light text-white/60 text-[0.82rem] leading-[1.75] mb-5">Higienização profunda que remove impurezas, células mortas e cravos que o skincare caseiro não alcança.</p>
+          <p class="bento-ideal"><b>Ideal para</b>cravos, acne, oleosidade ou poros dilatados.</p>
+        </div>
+        <div class="bs-img"><img src="assets-cliente/spa-cuidado-facial.webp" alt="Limpeza de Pele" style="object-position:70% 50%" /></div>
+      </article>
+
+      <article data-reveal id="c-herbalife" class="info-card bento-card bento-split bh wide bento-feature flip scroll-mt-24">
+        <div class="bs-text">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-nutri"/></svg></span>
+            <span class="bento-tag">Nutrição</span>
+          </div>
+          <h3 class="font-serif text-[1.85rem] text-white mb-1.5 leading-[1.15]">Nutrição Herbalife</h3>
+          <p class="font-serif italic text-[#DFC08A] text-[1.05rem] mb-3 leading-snug">Beleza também se cuida de dentro pra fora.</p>
+          <p class="font-sans font-light text-white/60 text-[0.82rem] leading-[1.75] mb-5">Shake Fórmula 1, Protein Complete, Skin Beauty Booster e Hype Drink para complementar a alimentação com praticidade.</p>
+          <p class="bento-ideal"><b>Ideal para</b>quem quer somar a alimentação à rotina de cuidados.</p>
+        </div>
+        <div class="bs-img"><img src="assets-cliente/card-nutricao-herbalife.webp" alt="Nutrição Herbalife" style="object-position:50% 45%" /></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════ ONDE ESTAMOS ════════════════════════ -->
+<section id="onde" class="py-20 lg:py-28 bg-[#080D14] border-t border-white/5">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
+
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span data-reveal class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.3em] uppercase block mb-4">ONDE ESTAMOS</span>
+      <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[3rem] text-white leading-[1.35] mb-5">
+        Venha conhecer <em class="text-[#DFC08A] italic">o nosso espaço.</em>
+      </h2>
+      <p data-reveal class="font-sans font-light text-white/60 text-sm sm:text-base leading-[1.85]">
+        No Parque Campolim, em Sorocaba. O atendimento é individual e com hora marcada: fale com a Danní pelo WhatsApp e combine o melhor horário.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-[.8fr_1.2fr] gap-4 items-stretch">
+
+      <div data-reveal class="info-card p-8 lg:p-10 flex flex-col">
+        <ul class="space-y-7 mb-9">
+          <li class="flex gap-4">
+            <span class="loc-ic"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg></span>
+            <div>
+              <p class="bento-tag mb-2">Endereço</p>
+              <address class="not-italic font-serif text-[1.35rem] leading-snug text-white">Av. Mario Campolim, 560</address>
+              <p class="font-sans font-light text-white/60 text-sm leading-[1.7] mt-1">Parque Campolim · Sorocaba/SP<br />CEP 18047-600</p>
+            </div>
+          </li>
+          <li class="flex gap-4">
+            <span class="loc-ic"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
+            <div class="flex-1">
+              <p class="bento-tag mb-3">Horários</p>
+              <dl class="font-sans text-sm leading-snug">
+                <div class="flex justify-between gap-4 py-2 border-b border-white/[0.07]"><dt class="text-white/60 font-light">Terça a sexta</dt><dd class="text-white">13h às 20h</dd></div>
+                <div class="flex justify-between gap-4 py-2 border-b border-white/[0.07]"><dt class="text-white/60 font-light">Sábado</dt><dd class="text-white">9h às 14h</dd></div>
+                <div class="flex justify-between gap-4 py-2"><dt class="text-white/60 font-light">Dom e seg</dt><dd class="text-white/45">Fechado</dd></div>
+              </dl>
+            </div>
+          </li>
+          <li class="flex gap-4">
+            <span class="loc-ic"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg></span>
+            <div>
+              <p class="bento-tag mb-2">Contato</p>
+              <a href="https://wa.me/5515981113440" target="_blank" rel="noopener" class="font-serif text-[1.35rem] leading-snug text-white hover:text-[#DFC08A] transition-colors">(15) 98111-3440</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-auto flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Mario+Campolim,+560+-+Parque+Campolim,+Sorocaba+-+SP" target="_blank" rel="noopener"
+             class="btn-gold-solid inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-[2px] text-[0.65rem] uppercase flex-1">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>
+            <span>Como chegar</span>
+          </a>
+          <a href="https://share.google/KMeRvi8fQecKBlhaW" target="_blank" rel="noopener"
+             class="btn-gold-outline inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-[2px] text-[0.65rem] uppercase flex-1">
+            <span>Ver no Google</span>
+          </a>
+        </div>
+      </div>
+
+      <div data-reveal class="map-frame" data-map>
+        <iframe src="https://www.google.com/maps?q=-23.5273884,-47.4621041&z=17&hl=pt-BR&output=embed" title="Mapa: Espaço Cuide de Sua Beleza, Av. Mario Campolim, 560, Parque Campolim, Sorocaba"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <span class="map-hint" aria-hidden="true">Clique para mexer no mapa</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════ CTA FINAL / CONTATO ════════════════════════ -->
+<section id="contato" class="section-gold py-20 lg:py-28 text-center overflow-hidden">
+  <div data-stagger class="max-w-2xl mx-auto px-6 relative z-10">
+
+    <span data-reveal class="gold-eyebrow text-[0.62rem] font-sans font-semibold tracking-[0.3em] uppercase block mb-4">
+      PRÓXIMO PASSO
+    </span>
+
+    <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-5xl gold-title leading-[1.35] mb-6">
+      Se você chegou até aqui, <br /><em class="gold-em italic">já sabe o que merece.</em>
+    </h2>
+
+    <p data-reveal class="font-sans gold-text text-sm sm:text-base leading-[1.85] mb-4 max-w-lg mx-auto">
+      Os atendimentos são com hora marcada e agenda limitada, porque cada cliente recebe atenção individual do início ao fim.
+    </p>
+    <p data-reveal class="font-sans gold-text-soft text-sm sm:text-base leading-[1.85] mb-10 max-w-lg mx-auto">
+      A próxima etapa é simples: uma conversa rápida pelo WhatsApp para a Danní entender o seu caso e explicar, sem compromisso, qual procedimento faz mais sentido para você agora.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
+         class="btn-blue inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-xs font-semibold tracking-[0.14em] uppercase shadow-xl w-full sm:w-auto">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.508 5.823L.057 23.082a.75.75 0 00.921.921l5.259-1.451A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.95-1.353l-.354-.21-3.665 1.012 1.012-3.665-.21-.354A9.71 9.71 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+        <span>Agendar pelo WhatsApp</span>
+      </a>
+
+      <a href="#cuidados"
+         class="btn-dark-outline inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-[2px] text-xs font-semibold tracking-[0.14em] uppercase w-full sm:w-auto">
+        <span>Ver todos os procedimentos</span>
+      </a>
+    </div>
+
+    <p class="mt-8 font-serif italic gold-text-soft text-lg">Sem compromisso. Sem pressão. Só cuidado.</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════ FOOTER ════════════════════════ -->
+<footer class="site-footer relative bg-[#05080E] border-t border-white/5 overflow-hidden">
+  <div class="max-w-[1200px] mx-auto px-6 lg:px-12 relative z-10">
+
+    <!-- Chamada final -->
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 py-14 lg:py-16 border-b border-white/[0.08]">
+      <div>
+        <p class="font-script text-[#DFC08A] text-4xl sm:text-5xl leading-[1.3] mb-1">Mais que estética,</p>
+        <p class="font-serif text-white tracking-[0.28em] uppercase text-sm sm:text-base font-light">é sobre você.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
+           class="btn-gold-solid inline-flex items-center justify-center gap-3 px-7 py-4 rounded-[2px] text-[0.68rem] uppercase">
+          <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.508 5.823L.057 23.082a.75.75 0 00.921.921l5.259-1.451A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.95-1.353l-.354-.21-3.665 1.012 1.012-3.665-.21-.354A9.71 9.71 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+          <span>Agendar minha avaliação</span>
+        </a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Mario+Campolim,+560+-+Parque+Campolim,+Sorocaba+-+SP" target="_blank" rel="noopener"
+           class="btn-gold-outline inline-flex items-center justify-center gap-3 px-7 py-4 rounded-[2px] text-[0.68rem] uppercase">
+          <span>Como chegar</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Colunas -->
+    <div class="grid grid-cols-2 lg:grid-cols-[1.25fr_.75fr_1fr_1.1fr] gap-x-8 lg:gap-x-10 gap-y-12 py-14">
+
+      <div class="col-span-2 lg:col-span-1">
+        <img src="logo-dourado.webp" alt="Espaço Cuide de Sua Beleza — Danní Rodrigues" class="h-[68px] w-auto mb-5" />
+        <p class="font-sans font-light text-white/55 text-sm leading-[1.8] max-w-[320px] mb-6">
+          Estética com conhecimento, responsabilidade e cuidado. Pele, lábios e sobrancelhas, com avaliação individual e atendimento humanizado em Sorocaba.
+        </p>
+        <div class="flex items-center gap-3">
+          <a href="https://www.instagram.com/cuidedesuabelezasorocaba" target="_blank" rel="noopener" aria-label="Instagram" class="foot-social"><svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://wa.me/5515981113440" target="_blank" rel="noopener" aria-label="WhatsApp" class="foot-social"><svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.508 5.823L.057 23.082a.75.75 0 00.921.921l5.259-1.451A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.95-1.353l-.354-.21-3.665 1.012 1.012-3.665-.21-.354A9.71 9.71 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg></a>
+        </div>
+      </div>
+
+      <nav aria-label="Navegação do rodapé">
+        <h3 class="foot-title">Navegue</h3>
+        <ul class="foot-list">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#tratamentos">Tratamentos</a></li>
+          <li><a href="#resultados">Resultados</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#onde">Localização</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Cuidados">
+        <h3 class="foot-title">Cuidados</h3>
+        <ul class="foot-list">
+          <li><a href="#flowlips">Flow Lips</a></li>
+          <li><a href="#c-flow-brows">Flow Brows</a></li>
+          <li><a href="#c-derma-brows">Derma Brows</a></li>
+          <li><a href="#c-hidra-gloss">Hidra Gloss</a></li>
+          <li><a href="#c-shine-face">Shine Face</a></li>
+          <li><a href="#c-face-up">Face Up Microagulhamento</a></li>
+          <li><a href="#c-dermaplaning">Dermaplaning</a></li>
+          <li><a href="#c-limpeza">Limpeza de Pele</a></li>
+          <li><a href="#c-herbalife">Nutrição Herbalife</a></li>
+        </ul>
+      </nav>
+
+      <div class="col-span-2 lg:col-span-1">
+        <h3 class="foot-title">Visite-nos</h3>
+        <address class="not-italic font-sans text-sm leading-[1.75] text-white/60 mb-5">
+          <span class="block text-white">Av. Mario Campolim, 560</span>
+          Parque Campolim · Sorocaba/SP<br />CEP 18047-600
+        </address>
+        <dl class="font-sans text-[0.8rem] leading-snug mb-5 max-w-[260px]">
+          <div class="flex justify-between gap-4 py-1.5 border-b border-white/[0.07]"><dt class="text-white/50 font-light">Ter a sex</dt><dd class="text-white/85">13h às 20h</dd></div>
+          <div class="flex justify-between gap-4 py-1.5 border-b border-white/[0.07]"><dt class="text-white/50 font-light">Sábado</dt><dd class="text-white/85">9h às 14h</dd></div>
+          <div class="flex justify-between gap-4 py-1.5"><dt class="text-white/50 font-light">Dom e seg</dt><dd class="text-white/40">Fechado</dd></div>
+        </dl>
+        <p class="font-sans text-xs text-white/40 mb-4">Atendimento com hora marcada.</p>
+        <a href="https://wa.me/5515981113440" target="_blank" rel="noopener" class="font-serif text-xl text-white hover:text-[#DFC08A] transition-colors block">(15) 98111-3440</a>
+        <a href="https://www.instagram.com/cuidedesuabelezasorocaba" target="_blank" rel="noopener" class="font-sans text-xs text-white/50 hover:text-[#DFC08A] transition-colors mt-1 inline-block">@cuidedesuabelezasorocaba</a>
+      </div>
+
+    </div>
+
+    <!-- Barra final -->
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-4 py-7 border-t border-white/[0.08] text-[0.68rem] text-white/35 font-sans tracking-wider">
+      <p class="text-center lg:text-left">© 2026 Espaço Cuide de Sua Beleza · Danní Rodrigues. Todos os direitos reservados.</p>
+      <p class="text-center">Development by <a href="https://pljr.com.br" target="_blank" rel="noopener" class="text-[#C9A96E] hover:text-[#DFC08A] transition-colors">pljr.com.br</a></p>
+      <a href="#inicio" class="inline-flex items-center gap-2 text-white/50 hover:text-[#DFC08A] transition-colors uppercase tracking-[0.2em]">
+        Voltar ao topo
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Botão flutuante WhatsApp -->
+<a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp"
+   class="fixed bottom-5 right-5 z-40 w-13 h-13 w-[52px] h-[52px] rounded-full bg-[#D5B070] text-[#070B11] flex items-center justify-center shadow-[0_8px_30px_rgba(0,0,0,0.6)] hover:bg-[#E5C48A] hover:scale-105 transition-all">
+  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.508 5.823L.057 23.082a.75.75 0 00.921.921l5.259-1.451A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.95-1.353l-.354-.21-3.665 1.012 1.012-3.665-.21-.354A9.71 9.71 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+</a>
+
+<!-- Bibliotecas de animação -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+
+<script>
+(function () {
+  'use strict';
+
+  var html = document.documentElement;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var NAV_H = 72;
+  var lenis = null;
+  var hasGsap = !!(window.gsap && window.ScrollTrigger);
+
+  /* ---------------------------------------------------------------- Menu mobile */
+  var mobBtn = document.getElementById('mob-btn');
+  var mobMenu = document.getElementById('mob-menu');
+  if (mobBtn && mobMenu) {
+    mobBtn.addEventListener('click', function () { mobMenu.classList.toggle('hidden'); });
+    mobMenu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { mobMenu.classList.add('hidden'); });
+    });
+  }
+
+  /* ---------------------------------------------------------------- Helpers de scroll */
+  function refreshLayout() {
+    if (lenis) lenis.resize();
+    if (hasGsap) ScrollTrigger.refresh();
+  }
+  function scrollToY(y) {
+    if (lenis) lenis.scrollTo(y, { duration: 1.2 });
+    else window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
+  }
+
+  /* ---------------------------------------------------------------- Acordeão de serviços */
+  var acc = document.querySelector('[data-acc]');
+  if (acc) {
+    var panels = Array.prototype.slice.call(acc.querySelectorAll('[data-acc-panel]'));
+    var isDesktop = function () { return matchMedia('(min-width: 1024px)').matches; };
+    var settle;
+
+    // largura final do painel aberto (flex 4.2 : 1 nos demais): fixa o texto para não refluir
+    var setBodyWidth = function () {
+      if (!isDesktop()) return;
+      var gap = 8;
+      var free = acc.clientWidth - gap * (panels.length - 1);
+      acc.style.setProperty('--acc-w', Math.floor(free * 4.2 / (4.2 + panels.length - 1)) - 4 + 'px');
+    };
+    setBodyWidth();
+    if ('ResizeObserver' in window) new ResizeObserver(setBodyWidth).observe(acc);
+    else window.addEventListener('resize', setBodyWidth);
+
+    // panel = painel a abrir; null = fecha todos (estado de repouso: só o Flow Lips em destaque)
+    var setActive = function (panel, fromUser) {
+      var changed = false;
+      panels.forEach(function (p) {
+        var on = p === panel;
+        if (p.classList.contains('is-active') !== on) changed = true;
+        p.classList.toggle('is-active', on);
+        p.querySelector('.acc-trigger').setAttribute('aria-expanded', on ? 'true' : 'false');
+      });
+      if (!changed) return;
+      clearTimeout(settle);
+      settle = setTimeout(function () {
+        refreshLayout();
+        // no celular/tablet a altura dos painéis muda: garante que o painel aberto continue visível
+        if (panel && fromUser && !isDesktop()) {
+          var r = panel.getBoundingClientRect();
+          if (r.top < NAV_H + 8 || r.bottom > window.innerHeight - 8) {
+            scrollToY(window.scrollY + r.top - NAV_H - 16);
+          }
+        }
+      }, 720);
+    };
+
+    panels.forEach(function (panel) {
+      var trigger = panel.querySelector('.acc-trigger');
+      // hover só com mouse real e no layout horizontal
+      panel.addEventListener('pointerenter', function (e) {
+        if (e.pointerType === 'mouse' && isDesktop()) setActive(panel, false);
+      });
+      // toque/clique: no layout empilhado, tocar no painel aberto fecha; no desktop só abre
+      trigger.addEventListener('click', function () {
+        if (panel.classList.contains('is-active') && !isDesktop()) setActive(null, true);
+        else setActive(panel, true);
+      });
+      // teclado (Tab): abre ao focar; clique de mouse não dispara isso
+      trigger.addEventListener('focus', function () {
+        if (trigger.matches(':focus-visible')) setActive(panel, false);
+      });
+    });
+
+    // ao sair da área com o mouse, tudo volta a fechado
+    acc.addEventListener('pointerleave', function (e) {
+      if (e.pointerType === 'mouse' && isDesktop()) setActive(null, false);
+    });
+    // ao sair com o teclado, idem
+    acc.addEventListener('focusout', function (e) {
+      if (!acc.contains(e.relatedTarget) && !acc.matches(':hover')) setActive(null, false);
+    });
+  }
+
+  /* ---------------------------------------------------------------- Mapa: só interage depois do clique (não prende a rolagem) */
+  var mapBox = document.querySelector('[data-map]');
+  if (mapBox) {
+    mapBox.addEventListener('click', function () { mapBox.classList.add('is-active'); });
+    mapBox.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') mapBox.classList.remove('is-active'); });
+    document.addEventListener('pointerdown', function (e) { if (!mapBox.contains(e.target)) mapBox.classList.remove('is-active'); }, { passive: true });
+  }
+
+  /* ---------------------------------------------------------------- Link ativo do menu (independe do GSAP) */
+  var navLinks = {};
+  document.querySelectorAll('[data-nav]').forEach(function (a) { navLinks[a.getAttribute('data-nav')] = a; });
+  var groupOf = {
+    'inicio': 'inicio', 'tratamentos': 'tratamentos', 'sobre': 'sobre', 'para-voce': 'sobre',
+    'flowlips': 'tratamentos', 'como-funciona': 'tratamentos', 'resultados': 'resultados',
+    'depoimentos': 'depoimentos', 'cuidados': 'tratamentos', 'onde': 'contato', 'contato': 'contato'
+  };
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var g = groupOf[en.target.id];
+        Object.keys(navLinks).forEach(function (k) { navLinks[k].classList.toggle('is-current', k === g); });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(groupOf).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) io.observe(el);
+    });
+  }
+
+  /* ---------------------------------------------------------------- FAQ: abre/fecha com animação de altura */
+  document.querySelectorAll('details.faq-item').forEach(function (d) {
+    var sum = d.querySelector('summary');
+    var box = d.querySelector('.faq-a');
+    var anim = null;
+    sum.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (reduce || !box.animate) { d.open = !d.open; setTimeout(refreshLayout, 60); return; }
+      if (anim) anim.cancel();
+      if (!d.open) {
+        d.classList.remove('is-closing');
+        d.open = true;
+        var h = box.scrollHeight;
+        anim = box.animate([{ height: '0px', opacity: 0 }, { height: h + 'px', opacity: 1 }],
+          { duration: 520, easing: 'cubic-bezier(.22,.8,.2,1)' });
+        anim.onfinish = function () { anim = null; refreshLayout(); };
+      } else {
+        var h0 = box.offsetHeight;
+        d.classList.add('is-closing');
+        anim = box.animate([{ height: h0 + 'px', opacity: 1 }, { height: '0px', opacity: 0 }],
+          { duration: 340, easing: 'cubic-bezier(.4,0,.2,1)' });
+        anim.onfinish = function () { d.open = false; d.classList.remove('is-closing'); anim = null; refreshLayout(); };
+      }
+    });
+  });
+
+  /* ---------------------------------------------------------------- Comparador antes/depois */
+  var ba = document.querySelector('[data-ba]');
+  var baRange = ba ? ba.querySelector('.ba-range') : null;
+  var setBa = function (v) { ba.style.setProperty('--pos', v + '%'); };
+  if (ba && baRange) {
+    baRange.addEventListener('input', function () { setBa(baRange.value); });
+  }
+
+  /* ---------------------------------------------------------------- Cintilar: brilhinhos sutis ao passar o mouse */
+  if (finePointer && !reduce) {
+    // camada global (sem corte) para os brilhos que vazam para fora do card
+    var halo = document.createElement('div');
+    halo.className = 'sparkle-halo';
+    halo.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(halo);
+
+    var makeSparkles = function (el) {
+      var layer = null, timer = null, live = 0;
+      var MAX = 13;
+      var spawn = function () {
+        if (live >= MAX) return;
+        var sp = document.createElement('span');
+        sp.className = 'sparkle';
+        sp.style.setProperty('--s', (3 + Math.random() * 3.5).toFixed(1) + 'px');
+        sp.style.setProperty('--d', (1.1 + Math.random() * 0.9).toFixed(2) + 's');
+
+        if (Math.random() < 0.38) {
+          // fora: nasce rente à borda, até ~20px para fora
+          var r = el.getBoundingClientRect();
+          var side = Math.floor(Math.random() * 4), out = 2 + Math.random() * 18, x, y;
+          if (side === 0)      { x = r.left + Math.random() * r.width;  y = r.top - out; }
+          else if (side === 1) { x = r.right + out;                     y = r.top + Math.random() * r.height; }
+          else if (side === 2) { x = r.left + Math.random() * r.width;  y = r.bottom + out; }
+          else                 { x = r.left - out;                      y = r.top + Math.random() * r.height; }
+          sp.style.left = (x + window.scrollX) + 'px';
+          sp.style.top = (y + window.scrollY) + 'px';
+          halo.appendChild(sp);
+        } else {
+          // dentro do card
+          if (!layer) {
+            layer = document.createElement('span');
+            layer.className = 'sparkle-layer';
+            layer.setAttribute('aria-hidden', 'true');
+            el.appendChild(layer);
+          }
+          // só perto das bordas: faixa de ~36px junto a um dos 4 lados (o centro fica limpo)
+          var w = el.offsetWidth, h = el.offsetHeight, band = 6 + Math.random() * 30, ix, iy;
+          var sd = Math.floor(Math.random() * 4);
+          if (sd === 0)      { ix = 6 + Math.random() * (w - 12); iy = band; }
+          else if (sd === 1) { ix = w - band;                     iy = 6 + Math.random() * (h - 12); }
+          else if (sd === 2) { ix = 6 + Math.random() * (w - 12); iy = h - band; }
+          else               { ix = band;                         iy = 6 + Math.random() * (h - 12); }
+          sp.style.left = ix + 'px';
+          sp.style.top = iy + 'px';
+          layer.appendChild(sp);
+        }
+        live++;
+        sp.addEventListener('animationend', function () { sp.remove(); live--; });
+      };
+      el.addEventListener('pointerenter', function (e) {
+        if (e.pointerType !== 'mouse' || timer) return;
+        spawn();
+        timer = setInterval(spawn, 210);
+      });
+      el.addEventListener('pointerleave', function () { clearInterval(timer); timer = null; });
+    };
+    // brilhos apenas nos cards do Bento Grid
+    document.querySelectorAll('.bento-card').forEach(makeSparkles);
+  }
+
+  /* ---------------------------------------------------------------- Sem GSAP / movimento reduzido: para aqui */
+  if (reduce || !hasGsap) {
+    html.classList.remove('js');
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* ---------------------------------------------------------------- Lenis (scroll suave, só com mouse) */
+  if (finePointer && window.Lenis) {
+    lenis = new Lenis({
+      duration: 1.1,
+      easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+      smoothWheel: true
+    });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
+    gsap.ticker.lagSmoothing(0);
+  }
+
+  // âncoras internas passam pelo Lenis (e respeitam a altura da navbar)
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('href');
+      if (!id || id.length < 2) return;
+      var target = document.querySelector(id);
+      if (!target || !lenis) return;
+      e.preventDefault();
+      if (id === '#inicio') lenis.scrollTo(0, { duration: 1.4 });
+      else lenis.scrollTo(target, { offset: target.tagName === 'ARTICLE' ? -96 : -NAV_H, duration: 1.4 });
+      history.pushState(null, '', id);
+    });
+  });
+
+  /* ---------------------------------------------------------------- Split de palavras (preserva <em>) */
+  function splitWords(el) {
+    var words = [];
+    el.setAttribute('aria-label', el.textContent.replace(/\s+/g, ' ').trim());
+    (function walk(node) {
+      Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+        if (n.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(function (part) {
+            if (!part) return;
+            if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(' ')); return; }
+            var s = document.createElement('span');
+            s.className = 'w';
+            s.setAttribute('aria-hidden', 'true');
+            s.textContent = part;
+            words.push(s);
+            frag.appendChild(s);
+          });
+          n.parentNode.replaceChild(frag, n);
+        } else if (n.nodeType === 1 && n.tagName !== 'BR') {
+          walk(n);
+        }
+      });
+    })(el);
+    return words;
+  }
+
+  function writeIn(el, vars) {
+    return gsap.fromTo(el,
+      { clipPath: 'inset(-30% 100% -30% -6%)' },
+      Object.assign({ clipPath: 'inset(-30% -8% -30% -6%)', duration: 1.9, ease: 'power2.inOut' }, vars || {}));
+  }
+
+  function init() {
+    /* ---- Hero ---- */
+    var h1 = document.querySelector('[data-hero="h1"]');
+    var h1Words = h1 ? splitWords(h1) : [];
+    if (h1) { gsap.set(h1Words, { opacity: 0, y: '0.55em' }); gsap.set(h1, { opacity: 1 }); }
+
+    var tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    tl.fromTo('[data-hero="label"]', { opacity: 0, x: -18 }, { opacity: 1, x: 0, duration: .8, clearProps: 'transform' }, 0.1)
+      .to(h1Words, { opacity: 1, y: 0, duration: 1, stagger: .08 }, 0.25)
+      .add(writeIn('[data-hero-write]'), 0.9)
+      .fromTo('[data-hero="p"]', { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: .9, clearProps: 'transform' }, 1.25)
+      .fromTo('[data-hero="cta"]', { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: .9, clearProps: 'transform' }, 1.45)
+      .fromTo('[data-hero="hint"]', { opacity: 0 }, { opacity: 1, duration: .9 }, 1.7)
+      .fromTo('[data-hero="sig"]', { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 1.1, clearProps: 'transform' }, 1.1);
+
+    /* ---- Títulos de seção: palavras entrando ---- */
+    gsap.utils.toArray('[data-split]').forEach(function (el) {
+      var w = splitWords(el);
+      gsap.set(w, { opacity: 0, y: '0.5em' });
+      gsap.set(el, { opacity: 1 });
+      ScrollTrigger.create({
+        trigger: el, start: 'top 88%', once: true,
+        onEnter: function () { gsap.to(w, { opacity: 1, y: 0, duration: .9, stagger: .05, ease: 'power3.out' }); }
+      });
+    });
+
+    /* ---- FlowLips do card de destaque "escrevendo" ao entrar ---- */
+    gsap.utils.toArray('[data-write]:not([data-hero-write])').forEach(function (el) {
+      ScrollTrigger.create({ trigger: el, start: 'top 85%', once: true, onEnter: function () { writeIn(el); } });
+    });
+
+    /* ---- Blocos: entrada em lote (cascata entre irmãos visíveis juntos) ---- */
+    var reveals = gsap.utils.toArray('[data-reveal]');
+    gsap.set(reveals, { y: 28 });
+    ScrollTrigger.batch(reveals, {
+      start: 'top 90%', once: true,
+      onEnter: function (batch) {
+        gsap.to(batch, { opacity: 1, y: 0, duration: .9, stagger: .09, ease: 'power3.out', overwrite: true, clearProps: 'transform' });
+      }
+    });
+
+    /* ---- Contêineres em cascata (depoimento, CTA final) ---- */
+    gsap.utils.toArray('[data-stagger]').forEach(function (c) {
+      var kids = Array.prototype.slice.call(c.children).filter(function (k) { return !k.hasAttribute('data-split'); });
+      gsap.set(kids, { y: 26 });
+      ScrollTrigger.create({
+        trigger: c, start: 'top 85%', once: true,
+        onEnter: function () { gsap.to(kids, { opacity: 1, y: 0, duration: .9, stagger: .12, ease: 'power3.out', clearProps: 'transform' }); }
+      });
+    });
+
+    /* ---- Parallax sutil no hero (só telas grandes) ---- */
+    var mm = gsap.matchMedia();
+    mm.add('(min-width: 1024px)', function () {
+      gsap.fromTo('.hero-bg-img',
+        { yPercent: 0, scale: 1.14 },
+        { yPercent: 6, scale: 1.14, ease: 'none',
+          scrollTrigger: { trigger: '#inicio', start: 'top top', end: 'bottom top', scrub: true } });
+    });
+
+    /* ---- Comparador: começa mostrando o "antes" e desliza até o meio ao entrar na tela ---- */
+    if (ba && baRange) {
+      var pos = { v: 96 };
+      setBa(96); baRange.value = 96;
+      var intro = null;
+      var stop = function () { if (intro) { intro.kill(); intro = null; } };
+      ['pointerdown', 'keydown', 'touchstart'].forEach(function (ev) { baRange.addEventListener(ev, stop, { passive: true }); });
+      var touched = false;
+      var setPos = function (v) { pos.v = v; setBa(v); baRange.value = v; };
+      var play = function () {
+        if (touched) return;
+        stop(); setPos(96);
+        intro = gsap.to(pos, { v: 50, duration: 2.2, delay: .35, ease: 'power3.inOut',
+          onUpdate: function () { setBa(pos.v); baRange.value = pos.v; } });
+      };
+      var reset = function () { stop(); touched = false; setPos(96); };
+      // interagir (arrastar/teclar) cancela a animação nesta visita
+      ['pointerdown', 'keydown', 'touchstart'].forEach(function (ev) { baRange.addEventListener(ev, function () { touched = true; }, { passive: true }); });
+      ScrollTrigger.create({
+        trigger: ba, start: 'top 62%', end: 'bottom 8%',
+        onEnter: play, onEnterBack: play, onLeave: reset, onLeaveBack: reset
+      });
+    }
+
+    window.__animReady = true;
+    // imagens e fontes podem mudar as alturas depois do primeiro cálculo
+    window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+  }
+
+  // espera as fontes (senão o split calcula quebras de linha com fonte provisória)
+  var fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+  Promise.race([fontsReady, new Promise(function (r) { setTimeout(r, 1800); })]).then(init);
+})();
+
+</script>
+
+</body>
+</html>
