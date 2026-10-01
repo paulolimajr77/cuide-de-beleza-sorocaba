@@ -1908,26 +1908,23 @@
           scrollTrigger: { trigger: '#inicio', start: 'top top', end: 'bottom top', scrub: true } });
     });
 
-    /* ---- Comparador: a cada entrada na tela a linha corre do "antes" até a última posição escolhida ---- */
+    /* ---- Comparador: o efeito acontece na 1ª vez que a seção entra na tela; depois a linha fica onde estiver ---- */
     if (ba && baRange) {
       var pos = { v: 96 };
-      var current = 50;            // posição em que o usuário deixou (começa no meio)
       var intro = null;
+      var touched = false;
       var setPos = function (v) { pos.v = v; setBa(v); baRange.value = v; };
       var stop = function () { if (intro) { intro.kill(); intro = null; } };
       setPos(96);
-      // qualquer interação do usuário interrompe a animação e passa a ser a posição lembrada
-      baRange.addEventListener('input', function () { stop(); current = parseFloat(baRange.value); });
-      var play = function () {
-        stop(); setPos(96);
-        intro = gsap.to(pos, { v: current, duration: 2.2, delay: .35, ease: 'power3.inOut',
-          onUpdate: function () { setBa(pos.v); baRange.value = pos.v; } });
-      };
-      // ao sair da tela (fora da vista) prepara o início da próxima entrada, sem perder a posição lembrada
-      var park = function () { stop(); setPos(96); };
+      // se o usuário mexer, a animação para e a posição dele é a que vale daí em diante
+      baRange.addEventListener('input', function () { touched = true; stop(); });
       ScrollTrigger.create({
-        trigger: ba, start: 'top 62%', end: 'bottom 8%',
-        onEnter: play, onEnterBack: play, onLeave: park, onLeaveBack: park
+        trigger: ba, start: 'top 62%', once: true,
+        onEnter: function () {
+          if (touched) return;
+          intro = gsap.to(pos, { v: 50, duration: 2.2, delay: .35, ease: 'power3.inOut',
+            onUpdate: function () { setBa(pos.v); baRange.value = pos.v; } });
+        }
       });
     }
 
