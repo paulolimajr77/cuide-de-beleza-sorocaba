@@ -1925,9 +1925,9 @@
       });
       el.addEventListener('pointerleave', function () { clearInterval(timer); timer = null; });
     };
-    // brilhos nos cards do Bento Grid e nos botões principais (só com mouse)
+    // brilhos nos cards do Bento Grid e só nos botões principais/chamadas de ação (só com mouse)
     document.querySelectorAll('.bento-card').forEach(function (c) { makeSparkles(c); });
-    document.querySelectorAll('.btn-gold-solid, .btn-gold-outline, .btn-blue').forEach(function (b) {
+    document.querySelectorAll('.btn-gold-solid, .btn-blue').forEach(function (b) {
       makeSparkles(b, { max: 9, out: 0.55, bmin: 3, bspan: 11, gap: 230, reach: 14 });
     });
   }
