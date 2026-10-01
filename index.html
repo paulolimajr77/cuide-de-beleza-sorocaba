@@ -589,6 +589,11 @@
     html.vm-open, html.vm-open body { overflow: hidden; }
     @media (prefers-reduced-motion: reduce) { .vm-backdrop, .vm-stage { transition: none; } .vm-stage { transform: none; } }
 
+/* ===== Modo apresentação (só no endereço de teste *.vercel.app) ===== */
+    html.apresentacao, html.apresentacao * { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+    html.apresentacao img, html.apresentacao video { -webkit-user-drag: none; }
+    @media print { html.apresentacao body { display: none !important; } }
+
     /* Link ativo do menu */
     .nav-link { padding-bottom: 4px; border-bottom: 1px solid transparent; transition: color .3s ease, border-color .3s ease; }
     .nav-link:hover { color: #fff; }
@@ -2217,5 +2222,50 @@
 
 </script>
 
+<!-- Proteção durante a apresentação: liga só no endereço de teste (*.vercel.app). No domínio final fica desligada. -->
+<script>
+(function () {
+  var host = location.hostname;
+  var forcar = host === 'localhost' && /[?&]protecao=1(&|$)/.test(location.search);
+  if (!/\.vercel\.app$/.test(host) && !forcar) return;
+
+  document.documentElement.classList.add('apresentacao');
+  document.addEventListener('dragstart', function (e) { e.preventDefault(); });
+  document.addEventListener('keydown', function (e) {
+    var k = (e.key || '').toLowerCase();
+    if ((e.ctrlKey || e.metaKey) && (k === 'p' || k === 's' || k === 'u')) e.preventDefault();
+  }, true);
+  document.querySelectorAll('video').forEach(function (v) {
+    v.setAttribute('controlslist', 'nodownload noplaybackrate');
+    v.setAttribute('disablepictureinpicture', '');
+  });
+
+  function iniciar() {
+    var s = document.createElement('script');
+    s.src = 'vendor/disable-devtool.min.js';   // biblioteca disable-devtool 0.3.9, hospedada aqui (versão fixa)
+    s.onload = function () {
+      if (!window.DisableDevtool) return;
+      window.DisableDevtool({
+        clearLog: false,
+        disableMenu: true,
+        disableSelect: true,
+        disableCopy: true,
+        disableCut: true,
+        disablePaste: true,
+        // não atrapalha as ferramentas de medição de velocidade
+        ignore: function () { return /lighthouse|pagespeed|speedvitals|gtmetrix|pingdom|headlesschrome/i.test(navigator.userAgent); },
+        // em vez de fechar a aba e ir para um site de terceiros, mostra uma mensagem
+        ondevtoolopen: function () {
+          document.documentElement.innerHTML = '<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Apresentação protegida</title></head>' +
+            '<body style="margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#070B11;color:#DFC08A;font:400 16px/1.7 DM Sans,Arial,sans-serif;text-align:center;padding:24px">' +
+            '<p>Esta apresentação é protegida.<br>Para ver o site completo, fale com o responsável.</p></body>';
+        }
+      });
+    };
+    document.head.appendChild(s);
+  }
+  if (document.readyState === 'complete') iniciar(); else window.addEventListener('load', iniciar);
+})();
+</script>
 </body>
 </html>
