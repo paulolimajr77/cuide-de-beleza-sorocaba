@@ -442,6 +442,10 @@
 
         /* ===== Cintilar (brilhinhos sutis no hover) ===== */
     .info-card { position: relative; }
+    .btn-gold-solid, .btn-gold-outline, .btn-blue { position: relative; }
+    .sparkle-dk { background: radial-gradient(circle, #fff 0, #d9a94f 26%, rgba(190,140,60,0) 64%); }
+    .sparkle-dk::before { background: linear-gradient(90deg, transparent, #b98a3e, transparent); }
+    .sparkle-dk::after { background: linear-gradient(180deg, transparent, #b98a3e, transparent); }
     .sparkle-halo { position: absolute; left: 0; top: 0; width: 0; height: 0; overflow: visible; pointer-events: none; z-index: 4; }
     .sparkle-layer { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
     .bento-card > .sparkle-layer, .info-card > .sparkle-layer { z-index: 0; }
@@ -1846,20 +1850,26 @@
     halo.setAttribute('aria-hidden', 'true');
     document.body.appendChild(halo);
 
-    var makeSparkles = function (el) {
+    var makeSparkles = function (el, cfg) {
+      cfg = cfg || {};
       var layer = null, timer = null, live = 0;
-      var MAX = 13;
+      var MAX = cfg.max || 13;
+      var OUT = cfg.out != null ? cfg.out : 0.38;
+      var BMIN = cfg.bmin != null ? cfg.bmin : 6, BSPAN = cfg.bspan != null ? cfg.bspan : 30;
+      var GAP = cfg.gap || 210;
+      var dark = !!el.closest('.section-gold');
       var spawn = function () {
         if (live >= MAX) return;
         var sp = document.createElement('span');
         sp.className = 'sparkle';
         sp.style.setProperty('--s', (3 + Math.random() * 3.5).toFixed(1) + 'px');
         sp.style.setProperty('--d', (1.1 + Math.random() * 0.9).toFixed(2) + 's');
+        if (dark) sp.classList.add('sparkle-dk');
 
-        if (Math.random() < 0.38) {
+        if (Math.random() < OUT) {
           // fora: nasce rente à borda, até ~20px para fora
           var r = el.getBoundingClientRect();
-          var side = Math.floor(Math.random() * 4), out = 2 + Math.random() * 18, x, y;
+          var side = Math.floor(Math.random() * 4), out = 2 + Math.random() * (cfg.reach || 18), x, y;
           if (side === 0)      { x = r.left + Math.random() * r.width;  y = r.top - out; }
           else if (side === 1) { x = r.right + out;                     y = r.top + Math.random() * r.height; }
           else if (side === 2) { x = r.left + Math.random() * r.width;  y = r.bottom + out; }
@@ -1876,7 +1886,7 @@
             el.appendChild(layer);
           }
           // só perto das bordas: faixa de ~36px junto a um dos 4 lados (o centro fica limpo)
-          var w = el.offsetWidth, h = el.offsetHeight, band = 6 + Math.random() * 30, ix, iy;
+          var w = el.offsetWidth, h = el.offsetHeight, band = BMIN + Math.random() * BSPAN, ix, iy;
           var sd = Math.floor(Math.random() * 4);
           if (sd === 0)      { ix = 6 + Math.random() * (w - 12); iy = band; }
           else if (sd === 1) { ix = w - band;                     iy = 6 + Math.random() * (h - 12); }
@@ -1892,12 +1902,15 @@
       el.addEventListener('pointerenter', function (e) {
         if (e.pointerType !== 'mouse' || timer) return;
         spawn();
-        timer = setInterval(spawn, 210);
+        timer = setInterval(spawn, GAP);
       });
       el.addEventListener('pointerleave', function () { clearInterval(timer); timer = null; });
     };
-    // brilhos apenas nos cards do Bento Grid
-    document.querySelectorAll('.bento-card').forEach(makeSparkles);
+    // brilhos nos cards do Bento Grid e nos botões principais (só com mouse)
+    document.querySelectorAll('.bento-card').forEach(function (c) { makeSparkles(c); });
+    document.querySelectorAll('.btn-gold-solid, .btn-gold-outline, .btn-blue').forEach(function (b) {
+      makeSparkles(b, { max: 9, out: 0.55, bmin: 3, bspan: 11, gap: 230, reach: 14 });
+    });
   }
 
   /* ---------------------------------------------------------------- Sem GSAP / movimento reduzido: para aqui */
