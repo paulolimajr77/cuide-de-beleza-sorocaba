@@ -209,6 +209,28 @@
       .sobre-quote { position: relative !important; inset: auto !important; margin: 0 !important; border-radius: 0 !important; border-width: 1px 0 0 0 !important; background: #080D14 !important; padding: 1.5rem 1.75rem !important; }
     }
 
+    /* mesmos modelos em todo o site: dourado chapado e vidro (no champanhe: escuro chapado e contorno) */
+    .btn-blue, .btn-dark-outline { font-weight: 600; letter-spacing: 0.14em; }
+    .btn-gold-outline, .btn-dark-outline { font-weight: 600; }
+    .arr, .arr-send { flex: none; }
+    @keyframes arr-nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(6px); } }
+    @keyframes arr-send { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(4px, -4px); } }
+    @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+      /* só nos botões principais (chapados) */
+      .btn-gold-solid:hover .arr, .btn-blue:hover .arr { animation: arr-nudge .85s ease-in-out infinite; }
+      .btn-gold-solid:hover .arr-send, .btn-blue:hover .arr-send { animation: arr-send .85s ease-in-out infinite; }
+    }
+
+    /* notebook/tablet paisagem: títulos da faixa em uma linha; botões no celular sem quebrar feio; etiquetas do Bento mais compactas */
+    @media (min-width: 1024px) and (max-width: 1279px) {
+      .qnav-grid .qnav-cell { padding-left: .5rem; padding-right: .5rem; }
+      .qnav-grid .qnav-title { letter-spacing: .12em; }
+    }
+    @media (max-width: 480px) {
+      .btn-gold-solid, .btn-gold-outline, .btn-blue { letter-spacing: .08em !important; padding-left: 1.1rem !important; padding-right: 1.1rem !important; text-align: center; text-wrap: balance; }
+    }
+    .bento-tag { letter-spacing: .16em; }
+
     /* Faixa de diferenciais */
     .qnav-cell {
       border-right: 1px solid rgba(255, 255, 255, 0.06);
@@ -678,7 +700,7 @@
     </ul>
     <div class="mm-foot">
       <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
-         class="mm-item btn-gold-solid w-full flex items-center justify-center gap-2 py-4 rounded-[2px] text-[0.75rem] uppercase" style="--i:8">
+         class="mm-item btn-gold-solid w-full flex items-center justify-center gap-3 py-4 rounded-[2px] text-[0.75rem] uppercase" style="--i:8">
         Agendar pelo WhatsApp
       </a>
       <p class="mm-item mm-meta" style="--i:9">Av. Mario Campolim, 560 · Sorocaba/SP<br />Ter a sex 13h às 20h · Sáb 9h às 14h</p>
@@ -731,12 +753,12 @@
         <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
            class="btn-gold-solid inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase shadow-xl">
           <span>AGENDAR MINHA AVALIAÇÃO</span>
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          <svg class="arr w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
         <a href="#como-funciona"
            class="btn-gold-outline inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase shadow-lg">
           <span>ENTENDER COMO FUNCIONA</span>
-          <svg class="w-3.5 h-3.5 text-[#C9A96E]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          <svg class="arr w-3.5 h-3.5 text-[#C9A96E]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
       </div>
 
@@ -828,10 +850,9 @@
             Realce seus lábios sem perder a naturalidade. Mais harmonia, mais confiança, mais você.
           </p>
 
-          <a href="#flowlips"
-             class="inline-flex items-center gap-2.5 px-6 py-3 rounded-[2px] border border-[#C9A96E]/60 hover:border-[#C9A96E] bg-[#C9A96E]/10 hover:bg-[#C9A96E]/20 text-white hover:text-[#DFC08A] text-[0.75rem] font-sans font-semibold tracking-[0.16em] uppercase transition-all duration-300">
+          <a href="#flowlips" class="btn-gold-outline inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase">
             <span>SAIBA MAIS</span>
-            <svg class="w-3 h-3 text-[#C9A96E]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            <svg class="arr w-3 h-3 text-[#C9A96E]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
         </div>
       </div>
@@ -853,7 +874,7 @@
             <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Flow Brows</h3>
             <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">Sobrancelhas que valorizam o seu olhar. Sem exageros.</p>
             <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Nanopigmentação individualizada: corrige falhas, redefine o desenho e entrega um efeito natural e harmônico.</p>
-            <a href="#c-flow-brows" class="acc-link"><span>Ver detalhes</span><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            <a href="#c-flow-brows" class="acc-link"><span>Ver detalhes</span><svg class="arr w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
           </div>
         </div>
 
@@ -870,7 +891,7 @@
             <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Face Up</h3>
             <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">A renovação que sua pele pede.</p>
             <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Microagulhamento que estimula colágeno e elastina, potencializado por séruns específicos.</p>
-            <a href="#c-face-up" class="acc-link"><span>Ver detalhes</span><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            <a href="#c-face-up" class="acc-link"><span>Ver detalhes</span><svg class="arr w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
           </div>
         </div>
 
@@ -887,7 +908,7 @@
             <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Limpeza de Pele</h3>
             <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">O primeiro passo para uma pele saudável.</p>
             <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Higienização profunda que remove cravos e impurezas e prepara a pele para os próximos tratamentos.</p>
-            <a href="#c-limpeza" class="acc-link"><span>Ver detalhes</span><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            <a href="#c-limpeza" class="acc-link"><span>Ver detalhes</span><svg class="arr w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
           </div>
         </div>
 
@@ -904,7 +925,7 @@
             <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Shine Face</h3>
             <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">Pele iluminada. Textura uniforme.</p>
             <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Tecnologia, ativos de alta qualidade e Dermaplaning: resultado visível já na primeira sessão.</p>
-            <a href="#c-shine-face" class="acc-link"><span>Ver detalhes</span><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            <a href="#c-shine-face" class="acc-link"><span>Ver detalhes</span><svg class="arr w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
           </div>
         </div>
 
@@ -921,7 +942,7 @@
             <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Dermaplaning</h3>
             <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">Pele mais lisa, luminosa e receptiva.</p>
             <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Esfoliação com lâmina que remove células mortas e lanugem. Sem dor e sem tempo de recuperação.</p>
-            <a href="#c-dermaplaning" class="acc-link"><span>Ver detalhes</span><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            <a href="#c-dermaplaning" class="acc-link"><span>Ver detalhes</span><svg class="arr w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
           </div>
         </div>
 
@@ -938,7 +959,7 @@
             <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Nutrição Herbalife</h3>
             <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">Beleza também se cuida de dentro pra fora.</p>
             <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Shake Fórmula 1, Protein Complete, Skin Beauty Booster e Hype Drink.</p>
-            <a href="#c-herbalife" class="acc-link"><span>Ver detalhes</span><svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            <a href="#c-herbalife" class="acc-link"><span>Ver detalhes</span><svg class="arr w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
           </div>
         </div>
       </div>
@@ -1086,7 +1107,7 @@
         <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Quero%20saber%20mais%20sobre%20o%20Flow%20Lips." target="_blank" rel="noopener"
            class="btn-gold-solid inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase">
           <span>QUERO SABER SOBRE O FLOW LIPS</span>
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          <svg class="arr w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
       </div>
 
@@ -1218,9 +1239,9 @@
           Uma aplicação mais precisa, um efeito mais suave. Lábios que parecem seus, porque são. Imagem ilustrativa; o resultado varia de pessoa para pessoa.
         </p>
         <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vi%20o%20antes%20e%20depois%20do%20Flow%20Lips%20e%20quero%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
-           class="btn-blue inline-flex items-center gap-2.5 px-6 py-3 rounded-[2px] text-[0.75rem] font-sans font-semibold tracking-[0.16em] uppercase">
+           class="btn-blue inline-flex items-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase">
           <span>QUERO O MEU RESULTADO</span>
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          <svg class="arr w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
       </div>
 
@@ -1274,7 +1295,7 @@
 
     <div data-reveal class="text-center mt-10">
       <a href="https://share.google/KMeRvi8fQecKBlhaW" target="_blank" rel="noopener"
-         class="btn-gold-outline inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase">
+         class="btn-gold-outline inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase">
         <span>Ver todas as avaliações no Google</span>
       </a>
     </div>
@@ -1449,14 +1470,14 @@
           </li>
         </ul>
 
-        <div class="mt-auto flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3">
+        <div class="mt-auto flex flex-col sm:flex-row lg:flex-col gap-3">
           <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Mario+Campolim,+560+-+Parque+Campolim,+Sorocaba+-+SP" target="_blank" rel="noopener"
-             class="btn-gold-solid inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-[2px] text-[0.75rem] uppercase flex-1">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>
+             class="btn-gold-solid inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase flex-1">
+            <svg class="arr-send w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>
             <span>Como chegar</span>
           </a>
           <a href="https://share.google/KMeRvi8fQecKBlhaW" target="_blank" rel="noopener"
-             class="btn-gold-outline inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-[2px] text-[0.75rem] uppercase flex-1">
+             class="btn-gold-outline inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase flex-1">
             <span>Ver no Google</span>
           </a>
         </div>
@@ -1494,13 +1515,13 @@
 
     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
       <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
-         class="btn-blue inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-xs font-semibold tracking-[0.14em] uppercase shadow-xl w-full sm:w-auto">
+         class="btn-blue inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase shadow-xl w-full sm:w-auto">
         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.508 5.823L.057 23.082a.75.75 0 00.921.921l5.259-1.451A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.95-1.353l-.354-.21-3.665 1.012 1.012-3.665-.21-.354A9.71 9.71 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
         <span>Agendar pelo WhatsApp</span>
       </a>
 
       <a href="#cuidados"
-         class="btn-dark-outline inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-[2px] text-xs font-semibold tracking-[0.14em] uppercase w-full sm:w-auto">
+         class="btn-dark-outline inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase w-full sm:w-auto">
         <span>Ver todos os procedimentos</span>
       </a>
     </div>
@@ -1522,12 +1543,12 @@
       </div>
       <div class="flex flex-col sm:flex-row gap-3">
         <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
-           class="btn-gold-solid inline-flex items-center justify-center gap-3 px-7 py-4 rounded-[2px] text-[0.75rem] uppercase">
+           class="btn-gold-solid inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase">
           <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.508 5.823L.057 23.082a.75.75 0 00.921.921l5.259-1.451A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.95-1.353l-.354-.21-3.665 1.012 1.012-3.665-.21-.354A9.71 9.71 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
           <span>Agendar minha avaliação</span>
         </a>
         <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Mario+Campolim,+560+-+Parque+Campolim,+Sorocaba+-+SP" target="_blank" rel="noopener"
-           class="btn-gold-outline inline-flex items-center justify-center gap-3 px-7 py-4 rounded-[2px] text-[0.75rem] uppercase">
+           class="btn-gold-outline inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase">
           <span>Como chegar</span>
         </a>
       </div>
