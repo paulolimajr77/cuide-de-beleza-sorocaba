@@ -469,6 +469,10 @@
       font: 600 1.05rem/1 'Cormorant Garamond', serif; color: #DFC08A; border: 1px solid rgba(201,169,110,.45);
       background: radial-gradient(circle at 30% 25%, rgba(201,169,110,.25), rgba(201,169,110,.05) 70%); }
 
+    /* card de destino destacado ao chegar por um link (#c-...) */
+    .bento-card.is-target { border-color: rgba(223,192,138,.75); box-shadow: 0 0 0 1px rgba(223,192,138,.35), 0 18px 60px -12px rgba(213,176,112,.45); animation: targetPulse 2.2s ease-out 1; }
+    @keyframes targetPulse { 0% { box-shadow: 0 0 0 0 rgba(223,192,138,.65), 0 18px 60px -12px rgba(213,176,112,.5); } 100% { box-shadow: 0 0 0 1px rgba(223,192,138,.0), 0 18px 60px -12px rgba(213,176,112,.0); } }
+
     /* Link ativo do menu */
     .nav-link { padding-bottom: 4px; border-bottom: 1px solid transparent; transition: color .3s ease, border-color .3s ease; }
     .nav-link:hover { color: #fff; }
@@ -552,10 +556,11 @@
     </a>
 
     <!-- Menu Links -->
-    <ul class="hidden lg:flex items-center gap-9 text-[0.68rem] font-sans font-medium tracking-[0.24em] uppercase text-white/70">
+    <ul class="hidden lg:flex items-center gap-5 xl:gap-9 text-[0.64rem] xl:text-[0.68rem] font-sans font-medium tracking-[0.2em] xl:tracking-[0.24em] uppercase text-white/70">
       <li><a href="#inicio" data-nav="inicio" class="nav-link is-current">INÍCIO</a></li>
       <li><a href="#sobre" data-nav="sobre" class="nav-link">SOBRE</a></li>
       <li><a href="#tratamentos" data-nav="tratamentos" class="nav-link">TRATAMENTOS</a></li>
+      <li><a href="#cuidados" data-nav="cuidados" class="nav-link">CUIDADOS</a></li>
       <li><a href="#resultados" data-nav="resultados" class="nav-link">RESULTADOS</a></li>
       <li><a href="#depoimentos" data-nav="depoimentos" class="nav-link">DEPOIMENTOS</a></li>
       <li><a href="#contato" data-nav="contato" class="nav-link">CONTATO</a></li>
@@ -564,7 +569,7 @@
     <!-- Actions (WhatsApp Pill & Instagram Circle) -->
     <div class="flex items-center gap-3">
       <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
-         class="hidden sm:inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-white/25 hover:border-[#C9A96E] text-white hover:text-[#DFC08A] bg-white/5 hover:bg-[#C9A96E]/10 transition-all text-[0.62rem] font-sans font-medium tracking-[0.16em] uppercase">
+         class="hidden sm:inline-flex lg:hidden min-[1360px]:inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-white/25 hover:border-[#C9A96E] text-white hover:text-[#DFC08A] bg-white/5 hover:bg-[#C9A96E]/10 transition-all text-[0.62rem] font-sans font-medium tracking-[0.16em] uppercase">
         <svg class="w-3.5 h-3.5 fill-current text-[#C9A96E]" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.508 5.823L.057 23.082a.75.75 0 00.921.921l5.259-1.451A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.95-1.353l-.354-.21-3.665 1.012 1.012-3.665-.21-.354A9.71 9.71 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
         <span>Agendar pelo WhatsApp</span>
       </a>
@@ -588,6 +593,7 @@
       <li><a href="#inicio" class="text-[#DFC08A]">Início</a></li>
       <li><a href="#sobre" class="hover:text-white">Sobre</a></li>
       <li><a href="#tratamentos" class="hover:text-white">Tratamentos</a></li>
+      <li><a href="#cuidados" class="hover:text-white">Cuidados</a></li>
       <li><a href="#resultados" class="hover:text-white">Resultados</a></li>
       <li><a href="#depoimentos" class="hover:text-white">Depoimentos</a></li>
       <li><a href="#contato" class="hover:text-white">Contato</a></li>
@@ -1212,7 +1218,7 @@
     </div>
 
     <div class="bento" role="list">
-      <article data-reveal id="c-face-up" class="info-card bento-card bento-split ba wide bento-feature scroll-mt-24">
+      <article data-reveal id="c-face-up" class="info-card bento-card bento-split ba wide bento-feature scroll-mt-32">
         <div class="bs-text">
           <div class="flex items-center gap-4 mb-6">
             <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-faceup"/></svg></span>
@@ -1226,7 +1232,7 @@
         <div class="bs-img"><img src="assets-cliente/card-microagulhamento.webp" alt="Face Up Microagulhamento" style="object-position:50% 38%" /></div>
       </article>
 
-      <article data-reveal id="c-flow-brows" class="info-card bento-card bb scroll-mt-24">
+      <article data-reveal id="c-flow-brows" class="info-card bento-card bb scroll-mt-32">
         <div class="flex items-start justify-between gap-3 mb-6">
           <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-brows"/></svg></span>
           <span class="bento-tag text-right pt-1">Sobrancelhas</span>
@@ -1237,7 +1243,7 @@
         <p class="bento-ideal"><b>Ideal para</b>falhas, assimetria ou desenho indefinido.</p>
       </article>
 
-      <article data-reveal id="c-hidra-gloss" class="info-card bento-card bc scroll-mt-24">
+      <article data-reveal id="c-hidra-gloss" class="info-card bento-card bc scroll-mt-32">
         <div class="flex items-start justify-between gap-3 mb-6">
           <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-hidra"/></svg></span>
           <span class="bento-tag text-right pt-1">Lábios</span>
@@ -1248,7 +1254,7 @@
         <p class="bento-ideal"><b>Ideal para</b>lábios ressecados ou descamados.</p>
       </article>
 
-      <article data-reveal id="c-shine-face" class="info-card bento-card bd scroll-mt-24">
+      <article data-reveal id="c-shine-face" class="info-card bento-card bd scroll-mt-32">
         <div class="flex items-start justify-between gap-3 mb-6">
           <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-shine"/></svg></span>
           <span class="bento-tag text-right pt-1">Pele · Luminosidade</span>
@@ -1259,7 +1265,7 @@
         <p class="bento-ideal"><b>Ideal para</b>pele opaca, textura irregular ou manchas.</p>
       </article>
 
-      <article data-reveal id="c-derma-brows" class="info-card bento-card be scroll-mt-24">
+      <article data-reveal id="c-derma-brows" class="info-card bento-card be scroll-mt-32">
         <div class="flex items-start justify-between gap-3 mb-6">
           <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-derma"/></svg></span>
           <span class="bento-tag text-right pt-1">Sobrancelhas</span>
@@ -1270,7 +1276,7 @@
         <p class="bento-ideal"><b>Ideal para</b>queda, falhas persistentes ou fios fracos.</p>
       </article>
 
-      <article data-reveal id="c-dermaplaning" class="info-card bento-card bento-split bf wide flip scroll-mt-24">
+      <article data-reveal id="c-dermaplaning" class="info-card bento-card bento-split bf wide flip scroll-mt-32">
         <div class="bs-text">
           <div class="flex items-center gap-4 mb-6">
             <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-planing"/></svg></span>
@@ -1284,7 +1290,7 @@
         <div class="bs-img"><img src="assets-cliente/dermaplaning-lamina.webp" alt="Dermaplaning" style="object-position:50% 38%" /></div>
       </article>
 
-      <article data-reveal id="c-limpeza" class="info-card bento-card bento-split bg wide scroll-mt-24">
+      <article data-reveal id="c-limpeza" class="info-card bento-card bento-split bg wide scroll-mt-32">
         <div class="bs-text">
           <div class="flex items-center gap-4 mb-6">
             <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-limpeza"/></svg></span>
@@ -1298,7 +1304,7 @@
         <div class="bs-img"><img src="assets-cliente/spa-cuidado-facial.webp" alt="Limpeza de Pele" style="object-position:70% 50%" /></div>
       </article>
 
-      <article data-reveal id="c-herbalife" class="info-card bento-card bento-split bh wide bento-feature flip scroll-mt-24">
+      <article data-reveal id="c-herbalife" class="info-card bento-card bento-split bh wide bento-feature flip scroll-mt-32">
         <div class="bs-text">
           <div class="flex items-center gap-4 mb-6">
             <span class="bento-ic"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-nutri"/></svg></span>
@@ -1638,13 +1644,27 @@
     document.addEventListener('pointerdown', function (e) { if (!mapBox.contains(e.target)) mapBox.classList.remove('is-active'); }, { passive: true });
   }
 
+  /* ---------------------------------------------------------------- Destaca o card de destino (links #c-...) */
+  var flashTarget = function (id) {
+    var t = id && document.querySelector(id);
+    if (!t || !t.classList.contains('bento-card')) return;
+    t.classList.remove('is-target');
+    void t.offsetWidth;
+    t.classList.add('is-target');
+    setTimeout(function () { t.classList.remove('is-target'); }, 2400);
+  };
+  document.querySelectorAll('a[href^="#c-"]').forEach(function (a) {
+    a.addEventListener('click', function () { setTimeout(function () { flashTarget(a.getAttribute('href')); }, 1500); });
+  });
+  if (location.hash.indexOf('#c-') === 0) setTimeout(function () { flashTarget(location.hash); }, 900);
+
   /* ---------------------------------------------------------------- Link ativo do menu (independe do GSAP) */
   var navLinks = {};
   document.querySelectorAll('[data-nav]').forEach(function (a) { navLinks[a.getAttribute('data-nav')] = a; });
   var groupOf = {
     'inicio': 'inicio', 'tratamentos': 'tratamentos', 'sobre': 'sobre', 'para-voce': 'sobre',
     'flowlips': 'tratamentos', 'como-funciona': 'tratamentos', 'resultados': 'resultados',
-    'depoimentos': 'depoimentos', 'cuidados': 'tratamentos', 'onde': 'contato', 'contato': 'contato'
+    'depoimentos': 'depoimentos', 'cuidados': 'cuidados', 'onde': 'contato', 'contato': 'contato'
   };
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
@@ -1785,7 +1805,12 @@
       if (!target || !lenis) return;
       e.preventDefault();
       if (id === '#inicio') lenis.scrollTo(0, { duration: 1.4 });
-      else lenis.scrollTo(target, { offset: target.tagName === 'ARTICLE' ? -96 : -NAV_H, duration: 1.4 });
+      else {
+        // desconta o deslocamento de entrada (reveal) ainda pendente no alvo
+        var ty = window.gsap ? (gsap.getProperty(target, 'y') || 0) : 0;
+        var gap = target.tagName === 'ARTICLE' ? 96 : NAV_H;
+        lenis.scrollTo(target.getBoundingClientRect().top + window.scrollY - ty - gap, { duration: 1.4 });
+      }
       history.pushState(null, '', id);
     });
   });
