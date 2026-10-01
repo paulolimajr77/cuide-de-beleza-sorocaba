@@ -242,7 +242,7 @@
 
     /* FAQ */
     .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); }
-    .faq-item summary { cursor: pointer; list-style: none; }
+    .faq-item summary { cursor: pointer; list-style: none; padding: 1.25rem 0; min-height: 56px; }
     .faq-item summary::-webkit-details-marker { display: none; }
     .faq-item[open] .faq-plus { transform: rotate(45deg); }
     .faq-plus { transition: transform .3s ease; }
@@ -291,7 +291,7 @@
     .acc-trigger:focus-visible { outline: 2px solid #DFC08A; outline-offset: -4px; }
     .acc-panel.is-active .acc-trigger { opacity: 0; }
     .acc-ic { width: 36px; height: 36px; flex: none; border-radius: 999px; border: 1px solid rgba(201,169,110,.45); background: rgba(8,13,20,.8); display: flex; align-items: center; justify-content: center; color: #DFC08A; }
-    .acc-vt { font: 700 .68rem/1.2 'DM Sans', sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+    .acc-vt { font: 700 .75rem/1.2 'DM Sans', sans-serif; letter-spacing: .16em; text-transform: uppercase; }
     .acc-plus { margin-left: auto; color: #DFC08A; font-size: 1.4rem; line-height: 1; }
     .acc-body {
       position: absolute; left: 0; right: 0; bottom: 0; padding: 1.5rem; z-index: 2;
@@ -299,7 +299,7 @@
       transition: opacity .45s ease, transform .55s cubic-bezier(.22,.8,.2,1), visibility 0s linear .45s;
     }
     .acc-panel.is-active .acc-body { opacity: 1; visibility: visible; transform: none; transition-delay: .22s, .22s, 0s; }
-    .acc-link { display: inline-flex; align-items: center; gap: .6rem; font: 600 .65rem/1 'DM Sans', sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #DFC08A; padding: .75rem 0; border-bottom: 1px solid rgba(201,169,110,.45); transition: color .3s, border-color .3s; }
+    .acc-link { display: inline-flex; align-items: center; gap: .6rem; font: 600 .75rem/1 'DM Sans', sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #DFC08A; padding: .75rem 0; border-bottom: 1px solid rgba(201,169,110,.45); transition: color .3s, border-color .3s; }
     .acc-link:hover { color: #fff; border-color: #fff; }
 
     @media (min-width: 1024px) {
@@ -331,10 +331,10 @@
     .bento-card { transition: border-color .3s ease, translate .3s ease, box-shadow .5s ease; }
     .bento-card:hover { box-shadow: 0 14px 48px -14px rgba(213,176,112,.28); }
     .bento-card > * { position: relative; z-index: 1; }
-    .bento-tag { font: 600 .58rem/1.2 'DM Sans', sans-serif; letter-spacing: .24em; text-transform: uppercase; color: #C9A96E; }
+    .bento-tag { font: 600 .75rem/1.2 'DM Sans', sans-serif; letter-spacing: .24em; text-transform: uppercase; color: #C9A96E; }
     .bento-ic { width: 52px; height: 52px; border-radius: 999px; flex: none; display: flex; align-items: center; justify-content: center; color: #DFC08A;
       border: 1px solid rgba(201,169,110,.4); background: radial-gradient(circle at 30% 25%, rgba(201,169,110,.22), rgba(201,169,110,.04) 70%); }
-    .bento-ideal { margin-top: auto; padding-top: .9rem; border-top: 1px solid rgba(255,255,255,.08); font: 400 .72rem/1.55 'DM Sans', sans-serif; color: rgba(255,255,255,.5); }
+    .bento-ideal { margin-top: auto; padding-top: .9rem; border-top: 1px solid rgba(255,255,255,.08); font: 400 .8rem/1.55 'DM Sans', sans-serif; color: rgba(255,255,255,.62); }
     .bento-ideal b { color: #C9A96E; text-transform: uppercase; letter-spacing: .18em; font-weight: 600; margin-right: .35rem; }
     .bento-feature { background: linear-gradient(160deg, rgba(201,169,110,.10), rgba(14,20,30,.6) 60%); border-color: rgba(201,169,110,.3); }
 
@@ -378,10 +378,10 @@
       border: 1px solid rgba(223,192,138,.75); backdrop-filter: blur(6px); box-shadow: 0 6px 24px rgba(0,0,0,.5); }
     .ba-range { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; -webkit-appearance: none; appearance: none; touch-action: pan-y; }
     .ba-slider:focus-within .ba-handle::after { outline: 2px solid #DFC08A; outline-offset: 3px; }
-    .ba-badge { position: absolute; bottom: 12px; padding: .45rem .8rem; font: 700 .6rem/1 'DM Sans', sans-serif; letter-spacing: .24em; text-transform: uppercase;
+    .ba-badge { position: absolute; bottom: 12px; padding: .45rem .8rem; font: 700 .75rem/1 'DM Sans', sans-serif; letter-spacing: .24em; text-transform: uppercase;
       color: #fff; background: rgba(7,11,17,.72); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,.2); pointer-events: none; left: 12px; }
     .ba-badge-gold { color: #070B11; background: #D5B070; border-color: #D5B070; left: auto; right: 12px; }
-    .ba-cap { margin: 10px 0 0; text-align: center; font: 500 .62rem/1.4 'DM Sans', sans-serif; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.42); }
+    .ba-cap { margin: 10px 0 0; text-align: center; font: 500 .75rem/1.4 'DM Sans', sans-serif; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.65); }
 
     /* ===== FAQ animado ===== */
     .faq-item summary span:first-child { transition: color .3s ease; }
@@ -445,7 +445,7 @@
       filter: grayscale(.35) invert(.92) hue-rotate(180deg) contrast(.92) brightness(.95) sepia(.18); }
     .map-frame.is-active iframe { pointer-events: auto; }
     .map-frame::after { content: ''; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 60px rgba(8,13,20,.55); }
-    .map-hint { position: absolute; right: 12px; bottom: 12px; z-index: 2; padding: .45rem .75rem; font: 600 .58rem/1 'DM Sans', sans-serif; letter-spacing: .18em; text-transform: uppercase;
+    .map-hint { position: absolute; right: 12px; bottom: 12px; z-index: 2; padding: .45rem .75rem; font: 600 .75rem/1 'DM Sans', sans-serif; letter-spacing: .18em; text-transform: uppercase;
       color: #DFC08A; background: rgba(7,11,17,.75); backdrop-filter: blur(6px); border: 1px solid rgba(201,169,110,.35); pointer-events: none; transition: opacity .3s ease; }
     .map-frame.is-active .map-hint { opacity: 0; }
     @media (min-width: 1024px) { .map-frame { min-height: 100%; } }
@@ -454,9 +454,9 @@
     /* ===== Rodapé ===== */
     .site-footer::before { content: ''; position: absolute; left: 50%; top: -240px; width: 900px; height: 420px; transform: translateX(-50%); pointer-events: none;
       background: radial-gradient(closest-side, rgba(201,169,110,.10), transparent 70%); }
-    .foot-title { font: 600 .62rem/1 'DM Sans', sans-serif; letter-spacing: .28em; text-transform: uppercase; color: #C9A96E; margin: 0 0 1.4rem; }
-    .foot-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; }
-    .foot-list a { font: 300 .875rem/1.4 'DM Sans', sans-serif; color: rgba(255,255,255,.6); transition: color .3s ease, padding-left .3s ease; }
+    .foot-title { font: 600 .75rem/1 'DM Sans', sans-serif; letter-spacing: .28em; text-transform: uppercase; color: #C9A96E; margin: 0 0 1.4rem; }
+    .foot-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+    .foot-list a { display: block; padding: .6rem 0; min-height: 44px; font: 300 .9rem/1.4 'DM Sans', sans-serif; color: rgba(255,255,255,.6); transition: color .3s ease, padding-left .3s ease; }
     .foot-list a:hover { color: #DFC08A; padding-left: .35rem; }
     .foot-social { width: 42px; height: 42px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; color: rgba(255,255,255,.75);
       border: 1px solid rgba(255,255,255,.2); transition: color .3s ease, border-color .3s ease, background-color .3s ease; }
@@ -472,6 +472,37 @@
     /* card de destino destacado ao chegar por um link (#c-...) */
     .bento-card.is-target { border-color: rgba(223,192,138,.75); box-shadow: 0 0 0 1px rgba(223,192,138,.35), 0 18px 60px -12px rgba(213,176,112,.45); animation: targetPulse 2.2s ease-out 1; }
     @keyframes targetPulse { 0% { box-shadow: 0 0 0 0 rgba(223,192,138,.65), 0 18px 60px -12px rgba(213,176,112,.5); } 100% { box-shadow: 0 0 0 1px rgba(223,192,138,.0), 0 18px 60px -12px rgba(213,176,112,.0); } }
+
+    /* ===== Menu mobile em tela cheia ===== */
+    .mob-bar { display: block; width: 18px; height: 1px; background: #fff; transition: transform .45s cubic-bezier(.77,0,.18,1), opacity .25s ease; }
+    .mob-bar + .mob-bar { margin-top: 6px; }
+    .mob-btn[aria-expanded="true"] .mob-bar:first-child { transform: translateY(3.5px) rotate(45deg); }
+    .mob-btn[aria-expanded="true"] .mob-bar:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+    .mob-btn[aria-expanded="true"] { border-color: rgba(201,169,110,.6); }
+    .navbar-glass.is-menu { background: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom-color: transparent; }
+    html.menu-open, html.menu-open body { overflow: hidden; }
+    #mob-menu { position: fixed; inset: 0; z-index: 49; display: none; overflow-y: auto; overscroll-behavior: contain;
+      background: radial-gradient(120% 60% at 88% 0%, rgba(201,169,110,.18), transparent 62%), radial-gradient(90% 50% at 0% 100%, rgba(201,169,110,.08), transparent 70%), linear-gradient(180deg, #0B111A, #070B11);
+      clip-path: circle(0px at calc(100% - 46px) 36px); transition: clip-path .6s cubic-bezier(.77,0,.18,1); }
+    #mob-menu.is-shown { display: block; }
+    #mob-menu.is-open { clip-path: circle(150% at calc(100% - 46px) 36px); transition-duration: .8s; }
+    .mm-inner { min-height: 100%; display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; padding: 96px 28px 28px; max-width: 560px; margin: 0 auto; }
+    .mm-list { list-style: none; margin: 0; padding: 0; }
+    .mm-link { display: flex; align-items: baseline; gap: 1rem; padding: .95rem 0; border-bottom: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.88); transition: color .3s ease, padding-left .3s ease; }
+    .mm-link:hover, .mm-link:focus-visible { color: #DFC08A; padding-left: .35rem; }
+    .mm-link.is-current { color: #DFC08A; }
+    .mm-num { font: 600 .75rem/1 'DM Sans', sans-serif; letter-spacing: .2em; color: #C9A96E; min-width: 1.6rem; }
+    .mm-txt { font: 300 clamp(1.9rem, 8vw, 2.5rem)/1.1 'Cormorant Garamond', serif; flex: 1; }
+    .mm-arrow { width: 22px; height: 22px; align-self: center; color: #C9A96E; opacity: 0; transform: translateX(-8px); transition: opacity .3s ease, transform .3s ease; }
+    .mm-link:hover .mm-arrow, .mm-link.is-current .mm-arrow { opacity: 1; transform: none; }
+    .mm-meta { margin: 1.1rem 0 0; text-align: center; font: 300 .8rem/1.7 'DM Sans', sans-serif; color: rgba(255,255,255,.6); }
+    .mm-item { opacity: 0; transform: translateY(26px); transition: opacity .22s ease, transform .22s ease; }
+    #mob-menu.is-open .mm-item { opacity: 1; transform: none; transition: opacity .6s ease, transform .75s cubic-bezier(.2,.7,.2,1); transition-delay: calc(.3s + var(--i, 0) * .055s); }
+    @media (prefers-reduced-motion: reduce) {
+      #mob-menu, #mob-menu.is-open { transition: none; }
+      .mm-item, #mob-menu.is-open .mm-item { transition: none; transform: none; }
+      .mob-bar { transition: none; }
+    }
 
     /* Link ativo do menu */
     .nav-link { padding-bottom: 4px; border-bottom: 1px solid transparent; transition: color .3s ease, border-color .3s ease; }
@@ -556,7 +587,7 @@
     </a>
 
     <!-- Menu Links -->
-    <ul class="hidden lg:flex items-center gap-5 xl:gap-9 text-[0.64rem] xl:text-[0.68rem] font-sans font-medium tracking-[0.2em] xl:tracking-[0.24em] uppercase text-white/70">
+    <ul class="hidden lg:flex items-center gap-5 xl:gap-9 text-[0.75rem] xl:text-[0.75rem] font-sans font-medium tracking-[0.2em] xl:tracking-[0.24em] uppercase text-white/70">
       <li><a href="#inicio" data-nav="inicio" class="nav-link is-current">INÍCIO</a></li>
       <li><a href="#sobre" data-nav="sobre" class="nav-link">SOBRE</a></li>
       <li><a href="#tratamentos" data-nav="tratamentos" class="nav-link">TRATAMENTOS</a></li>
@@ -569,7 +600,7 @@
     <!-- Actions (WhatsApp Pill & Instagram Circle) -->
     <div class="flex items-center gap-3">
       <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
-         class="hidden sm:inline-flex lg:hidden min-[1360px]:inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-white/25 hover:border-[#C9A96E] text-white hover:text-[#DFC08A] bg-white/5 hover:bg-[#C9A96E]/10 transition-all text-[0.62rem] font-sans font-medium tracking-[0.16em] uppercase">
+         class="hidden sm:inline-flex lg:hidden min-[1360px]:inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-white/25 hover:border-[#C9A96E] text-white hover:text-[#DFC08A] bg-white/5 hover:bg-[#C9A96E]/10 transition-all text-[0.75rem] font-sans font-medium tracking-[0.16em] uppercase">
         <svg class="w-3.5 h-3.5 fill-current text-[#C9A96E]" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.508 5.823L.057 23.082a.75.75 0 00.921.921l5.259-1.451A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.95-1.353l-.354-.21-3.665 1.012 1.012-3.665-.21-.354A9.71 9.71 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
         <span>Agendar pelo WhatsApp</span>
       </a>
@@ -579,33 +610,37 @@
         <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
       </a>
 
-      <!-- Mobile hamburger -->
-      <button id="mob-btn" aria-label="Abrir menu" class="lg:hidden w-9 h-9 flex flex-col items-center justify-center gap-1.5 border border-white/20 rounded-full">
-        <span class="w-4 h-px bg-white transition-all"></span>
-        <span class="w-4 h-px bg-white transition-all"></span>
+      <!-- Mobile hamburger (vira X) -->
+      <button id="mob-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mob-menu" class="mob-btn lg:hidden w-11 h-11 flex flex-col items-center justify-center border border-white/20 rounded-full">
+        <span class="mob-bar"></span>
+        <span class="mob-bar"></span>
       </button>
     </div>
   </div>
 
-  <!-- Mobile Menu Dropdown -->
-  <div id="mob-menu" class="hidden lg:hidden border-t border-white/10 bg-[#070B11]/98 px-6 py-6 backdrop-blur-2xl">
-    <ul class="flex flex-col gap-4 text-xs font-sans tracking-[0.2em] uppercase text-white/70">
-      <li><a href="#inicio" class="text-[#DFC08A]">Início</a></li>
-      <li><a href="#sobre" class="hover:text-white">Sobre</a></li>
-      <li><a href="#tratamentos" class="hover:text-white">Tratamentos</a></li>
-      <li><a href="#cuidados" class="hover:text-white">Cuidados</a></li>
-      <li><a href="#resultados" class="hover:text-white">Resultados</a></li>
-      <li><a href="#depoimentos" class="hover:text-white">Depoimentos</a></li>
-      <li><a href="#contato" class="hover:text-white">Contato</a></li>
-      <li class="pt-2">
-        <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank"
-           class="btn-gold-solid w-full flex items-center justify-center gap-2 py-3 rounded text-[0.65rem] uppercase">
-          Agendar pelo WhatsApp
-        </a>
-      </li>
+  </nav>
+
+<!-- Menu mobile em tela cheia -->
+<div id="mob-menu" class="lg:hidden" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
+  <div class="mm-inner">
+    <ul class="mm-list">
+      <li class="mm-item" style="--i:0"><a href="#inicio" data-mnav="inicio" class="mm-link"><span class="mm-num">01</span><span class="mm-txt">Início</span><svg class="mm-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li class="mm-item" style="--i:1"><a href="#sobre" data-mnav="sobre" class="mm-link"><span class="mm-num">02</span><span class="mm-txt">Sobre</span><svg class="mm-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li class="mm-item" style="--i:2"><a href="#tratamentos" data-mnav="tratamentos" class="mm-link"><span class="mm-num">03</span><span class="mm-txt">Tratamentos</span><svg class="mm-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li class="mm-item" style="--i:3"><a href="#cuidados" data-mnav="cuidados" class="mm-link"><span class="mm-num">04</span><span class="mm-txt">Cuidados</span><svg class="mm-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li class="mm-item" style="--i:4"><a href="#resultados" data-mnav="resultados" class="mm-link"><span class="mm-num">05</span><span class="mm-txt">Resultados</span><svg class="mm-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li class="mm-item" style="--i:5"><a href="#depoimentos" data-mnav="depoimentos" class="mm-link"><span class="mm-num">06</span><span class="mm-txt">Depoimentos</span><svg class="mm-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+      <li class="mm-item" style="--i:6"><a href="#contato" data-mnav="contato" class="mm-link"><span class="mm-num">07</span><span class="mm-txt">Contato</span><svg class="mm-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
     </ul>
+    <div class="mm-foot">
+      <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
+         class="mm-item btn-gold-solid w-full flex items-center justify-center gap-2 py-4 rounded-[2px] text-[0.75rem] uppercase" style="--i:8">
+        Agendar pelo WhatsApp
+      </a>
+      <p class="mm-item mm-meta" style="--i:9">Av. Mario Campolim, 560 · Sorocaba/SP<br />Ter a sex 13h às 20h · Sáb 9h às 14h</p>
+    </div>
   </div>
-</nav>
+</div>
 
 
 <!-- ════════════════════════ HERO SECTION ════════════════════════ -->
@@ -625,7 +660,7 @@
     <div class="max-w-2xl">
 
       <div data-hero="label" class="flex items-center gap-3.5 mb-8">
-        <span class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.35em] uppercase opacity-90">
+        <span class="text-[#C9A96E] text-[0.75rem] font-sans font-medium tracking-[0.35em] uppercase opacity-90">
           ESTÉTICA &nbsp;·&nbsp; BELEZA &nbsp;·&nbsp; AUTOCUIDADO
         </span>
         <div class="h-px w-14 bg-[rgba(201,169,110,0.5)]"></div>
@@ -649,18 +684,18 @@
 
       <div data-hero="cta" class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
         <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
-           class="btn-gold-solid inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.68rem] uppercase shadow-xl">
+           class="btn-gold-solid inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase shadow-xl">
           <span>AGENDAR MINHA AVALIAÇÃO</span>
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
         <a href="#como-funciona"
-           class="btn-gold-outline inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.68rem] uppercase shadow-lg">
+           class="btn-gold-outline inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase shadow-lg">
           <span>ENTENDER COMO FUNCIONA</span>
           <svg class="w-3.5 h-3.5 text-[#C9A96E]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
       </div>
 
-      <p data-hero="hint" class="mt-6 text-[0.68rem] font-sans tracking-[0.18em] uppercase text-white/45">
+      <p data-hero="hint" class="mt-6 text-[0.75rem] font-sans tracking-[0.18em] uppercase text-white/60">
         Atendimento com hora marcada · Sorocaba/SP
       </p>
 
@@ -672,7 +707,7 @@
     <p class="font-script text-3xl lg:text-[2.6rem] text-[#DFC08A] leading-[1.3] mb-1.5 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
       Danní Rodrigues
     </p>
-    <p class="text-[0.58rem] lg:text-[0.62rem] font-sans font-medium tracking-[0.24em] text-white/70 uppercase max-w-[210px] leading-[1.6] drop-shadow">
+    <p class="text-[0.75rem] lg:text-[0.75rem] font-sans font-medium tracking-[0.24em] text-white/70 uppercase max-w-[210px] leading-[1.6] drop-shadow">
       ESTÉTICA COM CONHECIMENTO, RESPONSABILIDADE E CUIDADO.
     </p>
   </div>
@@ -687,32 +722,32 @@
 
       <div data-reveal class="qnav-cell py-7 px-4 flex flex-col items-center text-center">
         <svg class="qnav-icon w-6 h-6 text-[#C9A96E] mb-3 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342"/></svg>
-        <span class="qnav-title font-sans text-[0.65rem] font-bold tracking-[0.2em] uppercase text-white/90 mb-1.5 transition-colors">Formação contínua</span>
-        <span class="font-sans text-[0.7rem] text-white/45 leading-snug">Método Flow Lips by Natalia Beauty</span>
+        <span class="qnav-title font-sans text-[0.75rem] font-bold tracking-[0.2em] uppercase text-white/90 mb-1.5 transition-colors">Formação contínua</span>
+        <span class="font-sans text-[0.75rem] text-white/60 leading-snug">Método Flow Lips by Natalia Beauty</span>
       </div>
 
       <div data-reveal class="qnav-cell py-7 px-4 flex flex-col items-center text-center">
         <svg class="qnav-icon w-6 h-6 text-[#C9A96E] mb-3 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        <span class="qnav-title font-sans text-[0.65rem] font-bold tracking-[0.2em] uppercase text-white/90 mb-1.5 transition-colors">Avaliação individual</span>
-        <span class="font-sans text-[0.7rem] text-white/45 leading-snug">Antes de qualquer procedimento</span>
+        <span class="qnav-title font-sans text-[0.75rem] font-bold tracking-[0.2em] uppercase text-white/90 mb-1.5 transition-colors">Avaliação individual</span>
+        <span class="font-sans text-[0.75rem] text-white/60 leading-snug">Antes de qualquer procedimento</span>
       </div>
 
       <div data-reveal class="qnav-cell py-7 px-4 flex flex-col items-center text-center">
         <svg class="qnav-icon w-6 h-6 text-[#C9A96E] mb-3 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
-        <span class="qnav-title font-sans text-[0.65rem] font-bold tracking-[0.2em] uppercase text-white/90 mb-1.5 transition-colors">Biossegurança rigorosa</span>
-        <span class="font-sans text-[0.7rem] text-white/45 leading-snug">Materiais esterilizados</span>
+        <span class="qnav-title font-sans text-[0.75rem] font-bold tracking-[0.2em] uppercase text-white/90 mb-1.5 transition-colors">Biossegurança rigorosa</span>
+        <span class="font-sans text-[0.75rem] text-white/60 leading-snug">Materiais esterilizados</span>
       </div>
 
       <div data-reveal class="qnav-cell py-7 px-4 flex flex-col items-center text-center">
         <svg class="qnav-icon w-6 h-6 text-[#C9A96E] mb-3 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
-        <span class="qnav-title font-sans text-[0.65rem] font-bold tracking-[0.2em] uppercase text-white/90 mb-1.5 transition-colors">Atendimento humanizado</span>
-        <span class="font-sans text-[0.7rem] text-white/45 leading-snug">Escuta, cuidado e respeito</span>
+        <span class="qnav-title font-sans text-[0.75rem] font-bold tracking-[0.2em] uppercase text-white/90 mb-1.5 transition-colors">Atendimento humanizado</span>
+        <span class="font-sans text-[0.75rem] text-white/60 leading-snug">Escuta, cuidado e respeito</span>
       </div>
 
       <div data-reveal class="qnav-cell py-7 px-4 flex flex-col items-center text-center border-r-0 col-span-2 sm:col-span-1">
         <svg class="qnav-icon w-6 h-6 text-[#C9A96E] mb-3 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
-        <span class="qnav-title font-sans text-[0.65rem] font-bold tracking-[0.2em] uppercase text-white/90 mb-1.5 transition-colors">Hora marcada</span>
-        <span class="font-sans text-[0.7rem] text-white/45 leading-snug">Agenda limitada em Sorocaba/SP</span>
+        <span class="qnav-title font-sans text-[0.75rem] font-bold tracking-[0.2em] uppercase text-white/90 mb-1.5 transition-colors">Hora marcada</span>
+        <span class="font-sans text-[0.75rem] text-white/60 leading-snug">Agenda limitada em Sorocaba/SP</span>
       </div>
 
     </div>
@@ -736,7 +771,7 @@
         <div class="featured-lip-overlay"></div>
 
         <div class="relative z-10 max-w-[340px]">
-          <span class="block text-[#C9A96E] text-[0.62rem] font-sans font-semibold tracking-[0.3em] uppercase mb-4 opacity-95">
+          <span class="block text-[#C9A96E] text-[0.75rem] font-sans font-semibold tracking-[0.3em] uppercase mb-4 opacity-95">
             PROCEDIMENTO EM DESTAQUE
           </span>
 
@@ -749,7 +784,7 @@
           </p>
 
           <a href="#flowlips"
-             class="inline-flex items-center gap-2.5 px-6 py-3 rounded-[2px] border border-[#C9A96E]/60 hover:border-[#C9A96E] bg-[#C9A96E]/10 hover:bg-[#C9A96E]/20 text-white hover:text-[#DFC08A] text-[0.65rem] font-sans font-semibold tracking-[0.16em] uppercase transition-all duration-300">
+             class="inline-flex items-center gap-2.5 px-6 py-3 rounded-[2px] border border-[#C9A96E]/60 hover:border-[#C9A96E] bg-[#C9A96E]/10 hover:bg-[#C9A96E]/20 text-white hover:text-[#DFC08A] text-[0.75rem] font-sans font-semibold tracking-[0.16em] uppercase transition-all duration-300">
             <span>SAIBA MAIS</span>
             <svg class="w-3 h-3 text-[#C9A96E]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
@@ -769,7 +804,7 @@
             <span class="acc-plus" aria-hidden="true">+</span>
           </button>
           <div class="acc-body">
-            <span class="block text-[#C9A96E] text-[0.58rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Sobrancelhas</span>
+            <span class="block text-[#C9A96E] text-[0.75rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Sobrancelhas</span>
             <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Flow Brows</h3>
             <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">Sobrancelhas que valorizam o seu olhar. Sem exageros.</p>
             <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Nanopigmentação individualizada: corrige falhas, redefine o desenho e entrega um efeito natural e harmônico.</p>
@@ -786,7 +821,7 @@
             <span class="acc-plus" aria-hidden="true">+</span>
           </button>
           <div class="acc-body">
-            <span class="block text-[#C9A96E] text-[0.58rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Pele · Renovação</span>
+            <span class="block text-[#C9A96E] text-[0.75rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Pele · Renovação</span>
             <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Face Up</h3>
             <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">A renovação que sua pele pede.</p>
             <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Microagulhamento que estimula colágeno e elastina, potencializado por séruns específicos.</p>
@@ -803,7 +838,7 @@
             <span class="acc-plus" aria-hidden="true">+</span>
           </button>
           <div class="acc-body">
-            <span class="block text-[#C9A96E] text-[0.58rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Pele · Essencial</span>
+            <span class="block text-[#C9A96E] text-[0.75rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Pele · Essencial</span>
             <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Limpeza de Pele</h3>
             <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">O primeiro passo para uma pele saudável.</p>
             <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Higienização profunda que remove cravos e impurezas e prepara a pele para os próximos tratamentos.</p>
@@ -820,7 +855,7 @@
             <span class="acc-plus" aria-hidden="true">+</span>
           </button>
           <div class="acc-body">
-            <span class="block text-[#C9A96E] text-[0.58rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Pele · Luminosidade</span>
+            <span class="block text-[#C9A96E] text-[0.75rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Pele · Luminosidade</span>
             <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Shine Face</h3>
             <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">Pele iluminada. Textura uniforme.</p>
             <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Tecnologia, ativos de alta qualidade e Dermaplaning: resultado visível já na primeira sessão.</p>
@@ -837,7 +872,7 @@
             <span class="acc-plus" aria-hidden="true">+</span>
           </button>
           <div class="acc-body">
-            <span class="block text-[#C9A96E] text-[0.58rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Pele · Textura</span>
+            <span class="block text-[#C9A96E] text-[0.75rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Pele · Textura</span>
             <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Dermaplaning</h3>
             <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">Pele mais lisa, luminosa e receptiva.</p>
             <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Esfoliação com lâmina que remove células mortas e lanugem. Sem dor e sem tempo de recuperação.</p>
@@ -854,7 +889,7 @@
             <span class="acc-plus" aria-hidden="true">+</span>
           </button>
           <div class="acc-body">
-            <span class="block text-[#C9A96E] text-[0.58rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Nutrição</span>
+            <span class="block text-[#C9A96E] text-[0.75rem] font-sans font-semibold tracking-[0.26em] uppercase mb-2">Nutrição</span>
             <h3 class="font-serif text-[1.65rem] leading-[1.15] text-white mb-2">Nutrição Herbalife</h3>
             <p class="font-serif italic text-[#DFC08A] text-[1.02rem] leading-snug mb-3">Beleza também se cuida de dentro pra fora.</p>
             <p class="font-sans font-light text-white/70 text-[0.8rem] leading-[1.7] mb-4">Shake Fórmula 1, Protein Complete, Skin Beauty Booster e Hype Drink.</p>
@@ -883,7 +918,7 @@
       <div>
         <div class="flex items-center gap-3.5 mb-6">
           <div class="h-px w-8 bg-[#C9A96E]"></div>
-          <span class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.3em] uppercase">O Espaço &amp; A Especialista</span>
+          <span class="text-[#C9A96E] text-[0.75rem] font-sans font-medium tracking-[0.3em] uppercase">O Espaço &amp; A Especialista</span>
         </div>
 
         <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[3rem] text-white leading-[1.35] mb-7">
@@ -949,7 +984,7 @@
   <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
 
     <div class="text-center max-w-2xl mx-auto mb-14">
-      <span data-reveal class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.3em] uppercase block mb-4">PARA VOCÊ</span>
+      <span data-reveal class="text-[#C9A96E] text-[0.75rem] font-sans font-medium tracking-[0.3em] uppercase block mb-4">PARA VOCÊ</span>
       <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[3rem] text-white leading-[1.35]">
         Você se reconhece em <em class="text-[#DFC08A] italic">algum desses momentos?</em>
       </h2>
@@ -988,7 +1023,7 @@
     <div class="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-start">
 
       <div>
-        <span data-reveal class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.3em] uppercase block mb-5">A SOLUÇÃO</span>
+        <span data-reveal class="text-[#C9A96E] text-[0.75rem] font-sans font-medium tracking-[0.3em] uppercase block mb-5">A SOLUÇÃO</span>
         <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[3rem] text-white leading-[1.35] mb-3">
           Seus lábios.
         </h2>
@@ -1004,7 +1039,7 @@
         </p>
 
         <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Quero%20saber%20mais%20sobre%20o%20Flow%20Lips." target="_blank" rel="noopener"
-           class="btn-gold-solid inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.68rem] uppercase">
+           class="btn-gold-solid inline-flex items-center justify-center gap-3 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase">
           <span>QUERO SABER SOBRE O FLOW LIPS</span>
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
@@ -1051,7 +1086,7 @@
   <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
 
     <div class="text-center max-w-2xl mx-auto mb-14">
-      <span data-reveal class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.3em] uppercase block mb-4">COMO FUNCIONA</span>
+      <span data-reveal class="text-[#C9A96E] text-[0.75rem] font-sans font-medium tracking-[0.3em] uppercase block mb-4">COMO FUNCIONA</span>
       <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[3rem] text-white leading-[1.35]">
         Cada detalhe pensado para você, <em class="text-[#DFC08A] italic">desde o primeiro minuto.</em>
       </h2>
@@ -1079,28 +1114,28 @@
     <div class="max-w-3xl mx-auto">
       <h3 class="font-serif text-2xl sm:text-3xl text-white text-center mb-8">Dúvidas frequentes</h3>
 
-      <details class="faq-item py-5">
+      <details class="faq-item">
         <summary class="flex items-center justify-between gap-6">
           <span class="font-serif text-lg sm:text-xl text-white">E se eu tiver medo de agulha?</span>
           <span class="faq-plus text-[#C9A96E] text-2xl leading-none">+</span>
         </summary>
-        <div class="faq-a"><p class="font-sans font-light text-white/60 text-sm leading-[1.8] pt-3 pr-10">A nanopigmentação usa agulhas muito mais finas que a micropigmentação tradicional, e a anestesia tópica é aplicada antes para garantir o seu conforto do início ao fim.</p></div>
+        <div class="faq-a"><p class="font-sans font-light text-white/60 text-sm leading-[1.8] pt-3 pb-5 pr-10">A nanopigmentação usa agulhas muito mais finas que a micropigmentação tradicional, e a anestesia tópica é aplicada antes para garantir o seu conforto do início ao fim.</p></div>
       </details>
 
-      <details class="faq-item py-5">
+      <details class="faq-item">
         <summary class="flex items-center justify-between gap-6">
           <span class="font-serif text-lg sm:text-xl text-white">E se a cor não ficar como eu imaginei?</span>
           <span class="faq-plus text-[#C9A96E] text-2xl leading-none">+</span>
         </summary>
-        <div class="faq-a"><p class="font-sans font-light text-white/60 text-sm leading-[1.8] pt-3 pr-10">A avaliação prévia existe exatamente para reduzir esse risco: você vê, decide e aprova antes de qualquer aplicação.</p></div>
+        <div class="faq-a"><p class="font-sans font-light text-white/60 text-sm leading-[1.8] pt-3 pb-5 pr-10">A avaliação prévia existe exatamente para reduzir esse risco: você vê, decide e aprova antes de qualquer aplicação.</p></div>
       </details>
 
-      <details class="faq-item py-5">
+      <details class="faq-item">
         <summary class="flex items-center justify-between gap-6">
           <span class="font-serif text-lg sm:text-xl text-white">Quanto tempo dura?</span>
           <span class="faq-plus text-[#C9A96E] text-2xl leading-none">+</span>
         </summary>
-        <div class="faq-a"><p class="font-sans font-light text-white/60 text-sm leading-[1.8] pt-3 pr-10">Em média de 1 a 2 anos, com variações conforme o tipo de pele. Um retoque pode ser feito para manter o resultado sempre fresco.</p></div>
+        <div class="faq-a"><p class="font-sans font-light text-white/60 text-sm leading-[1.8] pt-3 pb-5 pr-10">Em média de 1 a 2 anos, com variações conforme o tipo de pele. Um retoque pode ser feito para manter o resultado sempre fresco.</p></div>
       </details>
     </div>
 
@@ -1126,7 +1161,7 @@
       </div>
 
       <div>
-        <span data-reveal class="gold-eyebrow text-[0.62rem] font-sans font-semibold tracking-[0.3em] uppercase block mb-5">RESULTADOS</span>
+        <span data-reveal class="gold-eyebrow text-[0.75rem] font-sans font-semibold tracking-[0.3em] uppercase block mb-5">RESULTADOS</span>
         <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[2.8rem] gold-title leading-[1.35] mb-6">
           Pequenos detalhes que fazem <em class="gold-em italic">uma grande diferença.</em>
         </h2>
@@ -1138,7 +1173,7 @@
           Uma aplicação mais precisa, um efeito mais suave. Lábios que parecem seus, porque são. Imagem ilustrativa; o resultado varia de pessoa para pessoa.
         </p>
         <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vi%20o%20antes%20e%20depois%20do%20Flow%20Lips%20e%20quero%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
-           class="btn-blue inline-flex items-center gap-2.5 px-6 py-3 rounded-[2px] text-[0.65rem] font-sans font-semibold tracking-[0.16em] uppercase">
+           class="btn-blue inline-flex items-center gap-2.5 px-6 py-3 rounded-[2px] text-[0.75rem] font-sans font-semibold tracking-[0.16em] uppercase">
           <span>QUERO O MEU RESULTADO</span>
           <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
@@ -1154,7 +1189,7 @@
   <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
 
     <div class="text-center max-w-2xl mx-auto mb-12">
-      <span data-reveal class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.3em] uppercase block mb-4">DEPOIMENTOS</span>
+      <span data-reveal class="text-[#C9A96E] text-[0.75rem] font-sans font-medium tracking-[0.3em] uppercase block mb-4">DEPOIMENTOS</span>
       <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[3rem] text-white leading-[1.35]">
         Quem já viveu o cuidado <em class="text-[#DFC08A] italic">recomenda.</em>
       </h2>
@@ -1171,7 +1206,7 @@
           <span class="review-avatar" aria-hidden="true">C</span>
           <span>
             <span class="block font-sans text-sm font-medium text-white">Cristiane</span>
-            <span class="block font-sans text-[0.68rem] tracking-[0.18em] uppercase text-white/45 mt-1">Avaliação no Google</span>
+            <span class="block font-sans text-[0.75rem] tracking-[0.18em] uppercase text-white/60 mt-1">Avaliação no Google</span>
           </span>
         </figcaption>
       </figure>
@@ -1186,7 +1221,7 @@
           <span class="review-avatar" aria-hidden="true">G</span>
           <span>
             <span class="block font-sans text-sm font-medium text-white">Gabriel F.</span>
-            <span class="block font-sans text-[0.68rem] tracking-[0.18em] uppercase text-white/45 mt-1">Avaliação no Google</span>
+            <span class="block font-sans text-[0.75rem] tracking-[0.18em] uppercase text-white/60 mt-1">Avaliação no Google</span>
           </span>
         </figcaption>
       </figure>
@@ -1194,7 +1229,7 @@
 
     <div data-reveal class="text-center mt-10">
       <a href="https://share.google/KMeRvi8fQecKBlhaW" target="_blank" rel="noopener"
-         class="btn-gold-outline inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-[2px] text-[0.68rem] uppercase">
+         class="btn-gold-outline inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-[2px] text-[0.75rem] uppercase">
         <span>Ver todas as avaliações no Google</span>
       </a>
     </div>
@@ -1208,7 +1243,7 @@
   <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
 
     <div class="text-center max-w-3xl mx-auto mb-14">
-      <span data-reveal class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.3em] uppercase block mb-4">O CUIDADO COMPLETO</span>
+      <span data-reveal class="text-[#C9A96E] text-[0.75rem] font-sans font-medium tracking-[0.3em] uppercase block mb-4">O CUIDADO COMPLETO</span>
       <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[3rem] text-white leading-[1.35] mb-5">
         Lábios são só o começo. <em class="text-[#DFC08A] italic">Cuidamos de você por inteiro.</em>
       </h2>
@@ -1328,7 +1363,7 @@
   <div class="max-w-[1200px] mx-auto px-6 lg:px-12">
 
     <div class="text-center max-w-2xl mx-auto mb-12">
-      <span data-reveal class="text-[#C9A96E] text-[0.62rem] font-sans font-medium tracking-[0.3em] uppercase block mb-4">ONDE ESTAMOS</span>
+      <span data-reveal class="text-[#C9A96E] text-[0.75rem] font-sans font-medium tracking-[0.3em] uppercase block mb-4">ONDE ESTAMOS</span>
       <h2 data-split class="font-serif font-light text-3xl sm:text-4xl lg:text-[3rem] text-white leading-[1.35] mb-5">
         Venha conhecer <em class="text-[#DFC08A] italic">o nosso espaço.</em>
       </h2>
@@ -1356,7 +1391,7 @@
               <dl class="font-sans text-sm leading-snug">
                 <div class="flex justify-between gap-4 py-2 border-b border-white/[0.07]"><dt class="text-white/60 font-light">Terça a sexta</dt><dd class="text-white">13h às 20h</dd></div>
                 <div class="flex justify-between gap-4 py-2 border-b border-white/[0.07]"><dt class="text-white/60 font-light">Sábado</dt><dd class="text-white">9h às 14h</dd></div>
-                <div class="flex justify-between gap-4 py-2"><dt class="text-white/60 font-light">Dom e seg</dt><dd class="text-white/45">Fechado</dd></div>
+                <div class="flex justify-between gap-4 py-2"><dt class="text-white/60 font-light">Dom e seg</dt><dd class="text-white/60">Fechado</dd></div>
               </dl>
             </div>
           </li>
@@ -1371,12 +1406,12 @@
 
         <div class="mt-auto flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3">
           <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Mario+Campolim,+560+-+Parque+Campolim,+Sorocaba+-+SP" target="_blank" rel="noopener"
-             class="btn-gold-solid inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-[2px] text-[0.65rem] uppercase flex-1">
+             class="btn-gold-solid inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-[2px] text-[0.75rem] uppercase flex-1">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>
             <span>Como chegar</span>
           </a>
           <a href="https://share.google/KMeRvi8fQecKBlhaW" target="_blank" rel="noopener"
-             class="btn-gold-outline inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-[2px] text-[0.65rem] uppercase flex-1">
+             class="btn-gold-outline inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-[2px] text-[0.75rem] uppercase flex-1">
             <span>Ver no Google</span>
           </a>
         </div>
@@ -1397,7 +1432,7 @@
 <section id="contato" class="section-gold py-20 lg:py-28 text-center overflow-hidden">
   <div data-stagger class="max-w-2xl mx-auto px-6 relative z-10">
 
-    <span data-reveal class="gold-eyebrow text-[0.62rem] font-sans font-semibold tracking-[0.3em] uppercase block mb-4">
+    <span data-reveal class="gold-eyebrow text-[0.75rem] font-sans font-semibold tracking-[0.3em] uppercase block mb-4">
       PRÓXIMO PASSO
     </span>
 
@@ -1442,12 +1477,12 @@
       </div>
       <div class="flex flex-col sm:flex-row gap-3">
         <a href="https://wa.me/5515981113440?text=Ol%C3%A1%2C%20Danni!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener"
-           class="btn-gold-solid inline-flex items-center justify-center gap-3 px-7 py-4 rounded-[2px] text-[0.68rem] uppercase">
+           class="btn-gold-solid inline-flex items-center justify-center gap-3 px-7 py-4 rounded-[2px] text-[0.75rem] uppercase">
           <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.508 5.823L.057 23.082a.75.75 0 00.921.921l5.259-1.451A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 01-4.95-1.353l-.354-.21-3.665 1.012 1.012-3.665-.21-.354A9.71 9.71 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
           <span>Agendar minha avaliação</span>
         </a>
         <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Mario+Campolim,+560+-+Parque+Campolim,+Sorocaba+-+SP" target="_blank" rel="noopener"
-           class="btn-gold-outline inline-flex items-center justify-center gap-3 px-7 py-4 rounded-[2px] text-[0.68rem] uppercase">
+           class="btn-gold-outline inline-flex items-center justify-center gap-3 px-7 py-4 rounded-[2px] text-[0.75rem] uppercase">
           <span>Como chegar</span>
         </a>
       </div>
@@ -1504,20 +1539,20 @@
         <dl class="font-sans text-[0.8rem] leading-snug mb-5 max-w-[260px]">
           <div class="flex justify-between gap-4 py-1.5 border-b border-white/[0.07]"><dt class="text-white/50 font-light">Ter a sex</dt><dd class="text-white/85">13h às 20h</dd></div>
           <div class="flex justify-between gap-4 py-1.5 border-b border-white/[0.07]"><dt class="text-white/50 font-light">Sábado</dt><dd class="text-white/85">9h às 14h</dd></div>
-          <div class="flex justify-between gap-4 py-1.5"><dt class="text-white/50 font-light">Dom e seg</dt><dd class="text-white/40">Fechado</dd></div>
+          <div class="flex justify-between gap-4 py-1.5"><dt class="text-white/50 font-light">Dom e seg</dt><dd class="text-white/60">Fechado</dd></div>
         </dl>
-        <p class="font-sans text-xs text-white/40 mb-4">Atendimento com hora marcada.</p>
-        <a href="https://wa.me/5515981113440" target="_blank" rel="noopener" class="font-serif text-xl text-white hover:text-[#DFC08A] transition-colors block">(15) 98111-3440</a>
-        <a href="https://www.instagram.com/cuidedesuabelezasorocaba" target="_blank" rel="noopener" class="font-sans text-xs text-white/50 hover:text-[#DFC08A] transition-colors mt-1 inline-block">@cuidedesuabelezasorocaba</a>
+        <p class="font-sans text-xs text-white/60 mb-4">Atendimento com hora marcada.</p>
+        <a href="https://wa.me/5515981113440" target="_blank" rel="noopener" class="font-serif text-xl text-white hover:text-[#DFC08A] transition-colors block py-2">(15) 98111-3440</a>
+        <a href="https://www.instagram.com/cuidedesuabelezasorocaba" target="_blank" rel="noopener" class="font-sans text-xs text-white/50 hover:text-[#DFC08A] transition-colors inline-block py-2">@cuidedesuabelezasorocaba</a>
       </div>
 
     </div>
 
     <!-- Barra final -->
-    <div class="flex flex-col lg:flex-row items-center justify-between gap-4 py-7 border-t border-white/[0.08] text-[0.68rem] text-white/35 font-sans tracking-wider">
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-4 py-7 border-t border-white/[0.08] text-[0.75rem] text-white/55 font-sans tracking-wider">
       <p class="text-center lg:text-left">© 2026 Espaço Cuide de Sua Beleza · Danní Rodrigues. Todos os direitos reservados.</p>
-      <p class="text-center">Development by <a href="https://pljr.com.br" target="_blank" rel="noopener" class="text-[#C9A96E] hover:text-[#DFC08A] transition-colors">pljr.com.br</a></p>
-      <a href="#inicio" class="inline-flex items-center gap-2 text-white/50 hover:text-[#DFC08A] transition-colors uppercase tracking-[0.2em]">
+      <p class="text-center">Development by <a href="https://pljr.com.br" target="_blank" rel="noopener" class="text-[#C9A96E] hover:text-[#DFC08A] transition-colors inline-block py-2">pljr.com.br</a></p>
+      <a href="#inicio" class="inline-flex items-center gap-2 py-3 text-white/60 hover:text-[#DFC08A] transition-colors uppercase tracking-[0.2em]">
         Voltar ao topo
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
       </a>
@@ -1548,13 +1583,61 @@
   var lenis = null;
   var hasGsap = !!(window.gsap && window.ScrollTrigger);
 
-  /* ---------------------------------------------------------------- Menu mobile */
+  /* ---------------------------------------------------------------- Menu mobile (tela cheia, abre em círculo a partir do botão) */
   var mobBtn = document.getElementById('mob-btn');
   var mobMenu = document.getElementById('mob-menu');
+  var navBar = document.querySelector('.navbar-glass');
+  var menuTimer = null;
+  var menuIsOpen = false;
+  function setMenu(open) {
+    if (open === menuIsOpen) return;
+    menuIsOpen = open;
+    clearTimeout(menuTimer);
+    mobBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    mobBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    mobMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    if (open) {
+      var cur = document.querySelector('.nav-link.is-current');
+      var key = cur ? cur.getAttribute('data-nav') : 'inicio';
+      mobMenu.querySelectorAll('.mm-link').forEach(function (l) { l.classList.toggle('is-current', l.getAttribute('data-mnav') === key); });
+      mobMenu.scrollTop = 0;
+      mobMenu.classList.add('is-shown');
+      void mobMenu.offsetWidth;
+      html.classList.add('menu-open');
+      navBar.classList.add('is-menu');
+      if (lenis) lenis.stop();
+      mobMenu.classList.add('is-open');
+    } else {
+      mobMenu.classList.remove('is-open');
+      html.classList.remove('menu-open');
+      navBar.classList.remove('is-menu');
+      if (lenis) lenis.start();
+      menuTimer = setTimeout(function () { mobMenu.classList.remove('is-shown'); }, reduce ? 0 : 650);
+    }
+  }
   if (mobBtn && mobMenu) {
-    mobBtn.addEventListener('click', function () { mobMenu.classList.toggle('hidden'); });
-    mobMenu.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () { mobMenu.classList.add('hidden'); });
+    mobBtn.addEventListener('click', function () { setMenu(!menuIsOpen); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menuIsOpen) { setMenu(false); mobBtn.focus(); } });
+    window.addEventListener('resize', function () { if (menuIsOpen && window.innerWidth >= 1024) setMenu(false); });
+    mobMenu.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var id = a.getAttribute('href');
+        var target = document.querySelector(id);
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        setMenu(false);
+        if (!target) return;
+        // o menu ainda está se fechando enquanto a página desliza até a seção
+        setTimeout(function () {
+          var ty = window.gsap ? (window.gsap.getProperty(target, 'y') || 0) : 0;
+          var y = id === '#inicio' ? 0 : target.getBoundingClientRect().top + window.scrollY - ty - NAV_H;
+          scrollToY(Math.max(0, y));
+          history.pushState(null, '', id);
+        }, reduce ? 0 : 220);
+      });
+    });
+    mobMenu.querySelectorAll('a[target="_blank"]').forEach(function (a) {
+      a.addEventListener('click', function () { setMenu(false); });
     });
   }
 
