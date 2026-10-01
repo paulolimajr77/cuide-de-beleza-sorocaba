@@ -593,6 +593,9 @@
     html.apresentacao, html.apresentacao * { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
     html.apresentacao img, html.apresentacao video { -webkit-user-drag: none; }
     @media print { html.apresentacao body { display: none !important; } }
+    #protecao-veu { position: fixed; inset: 0; z-index: 2147483000; pointer-events: none; opacity: 0; visibility: hidden;
+      background: rgba(7, 11, 17, .5); -webkit-backdrop-filter: blur(26px); backdrop-filter: blur(26px); transition: opacity .12s ease, visibility 0s linear .12s; }
+    html.sem-foco #protecao-veu { opacity: 1; visibility: visible; transition-delay: 0s; }
 
     /* Link ativo do menu */
     .nav-link { padding-bottom: 4px; border-bottom: 1px solid transparent; transition: color .3s ease, border-color .3s ease; }
@@ -2239,6 +2242,36 @@
     v.setAttribute('controlslist', 'nodownload noplaybackrate');
     v.setAttribute('disablepictureinpicture', '');
   });
+
+  // PrintScreen: logo depois da captura, troca o que está na área de transferência por um espaço
+  function limparClipboard() {
+    var feito = false;
+    try { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(' ').catch(function () {}); feito = true; } } catch (e) {}
+    if (!feito) {
+      try {
+        var t = document.createElement('textarea');
+        t.value = ' '; t.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0';
+        document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove();
+      } catch (e) {}
+    }
+  }
+  document.addEventListener('keyup', function (e) {
+    if (e.key === 'PrintScreen' || e.keyCode === 44) { limparClipboard(); setTimeout(limparClipboard, 400); }
+  }, true);
+
+  // Janela sem foco (ferramenta de captura, outro programa): embaça a página até voltar
+  var veu = document.createElement('div');
+  veu.id = 'protecao-veu';
+  veu.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(veu);
+  var html = document.documentElement;
+  function semFoco(on) { html.classList.toggle('sem-foco', on); }
+  window.addEventListener('blur', function () {
+    // clicar dentro do mapa (iframe) tira o foco da janela mas o documento continua com foco: não embaça
+    setTimeout(function () { if (!document.hasFocus()) semFoco(true); }, 80);
+  });
+  window.addEventListener('focus', function () { semFoco(false); });
+  document.addEventListener('visibilitychange', function () { semFoco(document.hidden); });
 
   function iniciar() {
     var s = document.createElement('script');
