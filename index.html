@@ -118,6 +118,10 @@
       object-position: 68% 18%;
       filter: contrast(1.02) brightness(1.0);
     }
+    /* o zoom do parallax já nasce no CSS: evita o "salto" quando o JS carrega */
+    @media (min-width: 1024px) {
+      .hero-bg-img { transform: scale(1.1); will-change: transform; }
+    }
     .hero-overlay {
       position: absolute;
       inset: 0;
@@ -650,6 +654,7 @@
     src="assets-cliente/danni-rodrigues-hero.webp"
     alt="Danní Rodrigues — Espaço Cuide de Sua Beleza"
     class="hero-bg-img pointer-events-none"
+    width="1672" height="941" fetchpriority="high" decoding="async"
   />
 
   <div class="hero-overlay"></div>
@@ -1986,8 +1991,8 @@
     var mm = gsap.matchMedia();
     mm.add('(min-width: 1024px)', function () {
       gsap.fromTo('.hero-bg-img',
-        { yPercent: 0, scale: 1.14 },
-        { yPercent: 6, scale: 1.14, ease: 'none',
+        { yPercent: 0, scale: 1.1 },
+        { yPercent: 4, scale: 1.1, ease: 'none',
           scrollTrigger: { trigger: '#inicio', start: 'top top', end: 'bottom top', scrub: true } });
     });
 
